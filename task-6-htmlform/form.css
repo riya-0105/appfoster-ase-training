@@ -1,0 +1,117 @@
+.forms {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    width: 600px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.complete_form {
+    width: 600px;
+}
+
+.form_payment {
+    height: 42vh;
+    border: 2px solid purple;
+}
+
+legend {
+    border: 2px solid purple;
+}
+
+.form_payment fieldset {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 36vh;
+    border: 1px solid plum;
+}
+
+form ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-left: 5px;
+    list-style-type: none;
+}
+
+form ul li {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input::-webkit-input-placeholder {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: max-content;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    display: inline-flex;
+}
+
+.form_contact {
+    height: 34vh;
+    border: 2px solid purple;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 29vh;
+    border: 1px solid plum;
+}
+
+.form_address {
+    height: 80vh;
+    border: 2px solid purple;
+}
+.form_address fieldset, .form_address fieldset legend {
+    border: none;
+}
+
+.form_address_data fieldset {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+    height: 23vh;
+    border: 1px solid plum;
+}
+
+.form_address_data2 fieldset { 
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+    height: 15vh;
+    border: 1px solid plum;   
+}
+
+.form_submit {
+    height: 32vh;
+    border: 2px solid purple;
+}
+.form_submit fieldset {
+    margin-left: 20px;
+    height: 27vh;
+}
+
+
+.form_submit ul {
+    display: flex;
+    margin-left: 10px;
+    padding-left: 0px;
+}
+
+.form_submit ul li {
+    margin-left: 0px;
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
