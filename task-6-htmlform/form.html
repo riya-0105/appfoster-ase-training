@@ -4,268 +4,309 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width: device-width, intial-scale: 1.0">
         <title>Html Form</title>
-        <link rel="stylesheet" href="./form.css">
+        <link rel="stylesheet" href="../CSS/form.css">
     </head>
     <body>
         <div class="forms">
-           <form class="complete_form">
+           <form id="complete_form" class="complete_form">
                 <section class="form_payment">
                     <fieldset>
                         <legend>Payment Form</legend>
-                        <form class="form_data">
-                            <ul>
+                        <div class="form_data">
+                            <ul class="form_list">
                             <li>
-                                <label for="Medicare_No.">Medicare No.</label>
-                                <input type="text"  placeholder="Enter No." name="Medicare_No.">
-                                <!-- <p>/</p> -->
-                                <label for="valid_date">/ Valid Till</label>
-                                <input type="date" name="valid_date">
+                                <div id="form_div">
+                                    <label for="Medicare_No.">Medicare No.</label>
+                                    <input type="text"  placeholder="Enter No." name="Medicare_No.">
+                                    <label id="valid_date_label" for="valid_date">/Valid Till</label>
+                                    <input type="date" name="valid_date">
+                                </div>
                             </li> 
                             <li>
-                                <label for="title" >Title</label>
-                                <select name="title" placeholder="none">
+                                <div id="form_div">
+                                    <label for="title" >Title</label>
+                                    <select name="title" placeholder="none">
                                     <option selected disabled hidden>None</option>
                                     <option value="Mr.">Mr.</option>
                                     <option value="Miss/Mrs">Miss/Mrs.</option>
                                 </select>
-                            </li>
-                            <li style="display:block;",>
-                                <p style="margin: 0px 50px; font-size: 15px">First Name, Middle Name, Last Name</p>
-                                <label for="name">Name</label>
-                                <input name="name" placeholder="Enter Name.." type="text">
+                                </div>
                             </li>
                             <li>
-                                <label for="pref_name">Pref. Name</label>
-                                <input name="pref_name" placeholder="Enter Preferred Name.." type="text">
+                                <div id="form_div">
+                                    <p>First Name, Middle Name, Last Name</p>
+                                    <label for="name">Name</label>
+                                    <input name="name" placeholder="Enter Name.." type="text">
+                                </div>
                             </li>
                             <li>
-                                <label for="dob">DOB</label>
-                                <input name="dob" placeholder="Enter Birth Date.." type="date">
+                               <div id="form_div">
+                                    <label for="pref_name">Pref. Name</label>
+                                    <input name="pref_name" placeholder="Enter Preferred Name.." type="text">
+                               </div>
                             </li>
                             <li>
-                                <label style="margin-top: 0px">Sex</label>
-                                <input name="sex" placeholder="Enter Gender.." type="radio" value="male" >
-                                <label for="male">Male</label>
-                                <input name="sex" placeholder="Enter Gender.." type="radio" value="female">
+                                <div id="form_div">
+                                    <label for="dob">DOB</label>
+                                    <input name="dob" placeholder="Enter Birth Date.." type="date">
+                                </div>
+                            </li>
+                            <li>
+                                <div id="form_div">
+                                    <label>Sex</label>
+                                    <input name="sex" placeholder="Enter Gender.." type="radio" value="male" >
+                                    <label for="male">Male</label>
+                                    <input name="sex" placeholder="Enter Gender.." type="radio" value="female">
                                 <label for="female">Female</label>
+                                </div>
                             </li>
                             <li>
-                                <label for="family_name">Family Name</label>
-                                <input name="family_name" type="text" placeholder="Enter Family Name..">
+                                <div id="form_div">
+                                    <label for="family_name">Family Name</label>
+                                    <input name="family_name" type="text" placeholder="Enter Family Name..">
+                                </div>
                             </li>
                             </ul>
-                        </form>
+                        </div>
                     </fieldset>
                 </section>
                 <section class="form_contact">
                     <fieldset>
                         <legend>Contact Details</legend>
-                        <form class="form_contact_data">
+                        <div class="form_contact_data">
                             <ul>
                             <li>
-                                <p>Phone No.</p>
-                                <table style="margin-left: 10px;">
-                                    <tr>
-                                        <th><label for="home_phone">Home</label></th>
-                                        <th><label for="work_phone">Work</label></th>
-                                    </tr>
-                                    <tr>
-                                        <td><input name="mobile_phone" type="tel" placeholder="Enter Home Phone Number.."></td>
-                                        <td><input name="work_phone" type="tel" placeholder="Enter Work Phone Number.."></td>
-                                    </tr>
-                                    <tr>
-                                        <th><label for="mobile_phone">Mobile</label></th>
-                                        <th><label for="fax_phone">Fax</label></th>
-                                    </tr>
-                                    <tr>
-                                        <td><input name="mobile_phone" type="tel" placeholder="Enter Phone Number.."></td>
-                                        <td><input name="fax_phone" type="tel" placeholder="Enter Fax Number.."></td>
-                                    </tr>
-                                </table>
+                                <div id="form_phone">
+                                    <p>Phone No.</p>
+                                    <table>
+                                        <tr>
+                                            <th><label for="home_phone">Home</label></th>
+                                            <th><label for="work_phone">Work</label></th>
+                                        </tr>
+                                        <tr>
+                                            <td><input name="mobile_phone" type="tel" placeholder="Enter Home Phone Number.."></td>
+                                            <td><input name="work_phone" type="tel" placeholder="Enter Work Phone Number.."></td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="mobile_phone">Mobile</label></th>
+                                            <th><label for="fax_phone">Fax</label></th>
+                                        </tr>
+                                        <tr>
+                                            <td><input name="mobile_phone" type="tel" placeholder="Enter Phone Number.."></td>
+                                            <td><input name="fax_phone" type="tel" placeholder="Enter Fax Number.."></td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </li> 
                             <li>
-                                <label for="emerg_no">Emergency No.</label>
-                                <input name="emerg_no" placeholder="Enter Emergency Number.." type="tel">
+                                <div id="form_contactlist">
+                                    <label for="emerg_no">Emergency No.</label>
+                                    <input name="emerg_no" placeholder="Enter Emergency Number.." type="tel">
+                                </div>
                             </li>
                             <li>
-                                <label for="email">Email Id</label>
-                                <input name="email" placeholder="Enter Email Id.." type="email">
+                                <div id="form_contactlist">
+                                    <label for="email">Email Id</label>
+                                    <input name="email" placeholder="Enter Email Id.." type="email">
+                                </div>
                             </li>
                             </ul>
-                        </form>
+                        </div>
                     </fieldset>
                 </section>
                 <section class="form_address">
                     <fieldset>
                         <legend>Address Details</legend>
-                        <form class="form_address_data">
+                        <div class="form_address_data">
                             <fieldset>
-                                <legend style="border: 2px solid purple">Residential Address</legend>
+                                <legend>Residential Address</legend>
                                 <ul> 
                                     <li>
-                                    <label for="address1">Address 1</label>
-                                    <input name="address1" placeholder="Enter Address 1.." type="text">
+                                        <div id="form_addresslist">
+                                            <label for="address1">Address 1</label>
+                                            <input name="address1" placeholder="Enter Address 1.." type="text">
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="address2">Address 2</label>
-                                        <input name="address1" placeholder="Enter Address 2.." type="text">
+                                        <div id="form_addresslist">
+                                            <label for="address2">Address 2</label>
+                                            <input name="address1" placeholder="Enter Address 2.." type="text">
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="suburb">Suburb</label>
-                                        <input name="suburb" placeholder="Enter Suburb.." type="text">
-                                        <label for="suburb" style="margin-left: 20px">State</label>
-                                        <select for="state">
-                                            <option selected disabled hidden>None</option>
-                                            <option value="AP">Andhra Pradesh</option>
-                                            <option value="AR">Arunachal Pradesh</option>
-                                            <option value="AS">Assam</option>
-                                            <option value="BR">Bihar</option>
-                                            <option value="CT">Chhattisgarh</option>
-                                            <option value="GA">Gujarat</option>
-                                            <option value="HR">Haryana</option>
-                                            <option value="HP">Himachal Pradesh</option>
-                                            <option value="JK">Jammu and Kashmir</option>
-                                            <option value="GA">Goa</option>
-                                            <option value="JH">Jharkhand</option>
-                                            <option value="KA">Karnataka</option>
-                                            <option value="KL">Kerala</option>
-                                            <option value="MP">Madhya Pradesh</option>
-                                            <option value="MH">Maharashtra</option>
+                                        <div id="form_addresslist">
+                                            <label for="suburb">Suburb</label>
+                                            <input name="suburb" placeholder="Enter Suburb.." type="text">
+                                            <label for="suburb">State</label>
+                                            <select for="state">
+                                                <option selected disabled hidden>None</option>
+                                                <option value="AP">Andhra Pradesh</option>
+                                                <option value="AR">Arunachal Pradesh</option>
+                                                <option value="AS">Assam</option>
+                                                <option value="BR">Bihar</option>
+                                                <option value="CT">Chhattisgarh</option>
+                                                <option value="GA">Gujarat</option>
+                                                <option value="HR">Haryana</option>
+                                                <option value="HP">Himachal Pradesh</option>
+                                                <option value="JK">Jammu and Kashmir</option>
+                                                <option value="GA">Goa</option>
+                                                <option value="JH">Jharkhand</option>
+                                                <option value="KA">Karnataka</option>
+                                                <option value="KL">Kerala</option>
+                                                <option value="MP">Madhya Pradesh</option>
+                                                <option value="MH">Maharashtra</option>
                                                 <option value="MN">Manipur</option>
                                                 <option value="ML">Meghalaya</option>
-                                            <option value="MZ">Mizoram</option>
-                                            <option value="NL">Nagaland</option>
-                                            <option value="OR">Odisha</option>
-                                            <option value="PB">Punjab</option>
-                                            <option value="RJ">Rajasthan</option>
-                                            <option value="SK">Sikkim</option>
-                                            <option value="TN">Tamil Nadu</option>
-                                            <option value="TG">Telangana</option>
-                                            <option value="TR">Tripura</option>
-                                            <option value="UT">Uttarakhand</option>
-                                            <option value="UP">Uttar Pradesh</option>
-                                            <option value="WB">West Bengal</option>
-                                            <option value="AN">Andaman and Nicobar Islands</option>
-                                            <option value="CH">Chandigarh</option>
-                                            <option value="DN">Dadra and Nagar Haveli</option>
-                                            <option value="DD">Daman and Diu</option>
-                                            <option value="DL">Delhi</option>
-                                            <option value="LD">Lakshadweep</option>
-                                            <option value="PY">Puducherry</option>
-                                        </select>
+                                                <option value="MZ">Mizoram</option>
+                                                <option value="NL">Nagaland</option>
+                                                <option value="OR">Odisha</option>
+                                                <option value="PB">Punjab</option>
+                                                <option value="RJ">Rajasthan</option>
+                                                <option value="SK">Sikkim</option>
+                                                <option value="TN">Tamil Nadu</option>
+                                                <option value="TG">Telangana</option>
+                                                <option value="TR">Tripura</option>
+                                                <option value="UT">Uttarakhand</option>
+                                                <option value="UP">Uttar Pradesh</option>
+                                                <option value="WB">West Bengal</option>
+                                                <option value="AN">Andaman and Nicobar Islands</option>
+                                                <option value="CH">Chandigarh</option>
+                                                <option value="DN">Dadra and Nagar Haveli</option>
+                                                <option value="DD">Daman and Diu</option>
+                                                <option value="DL">Delhi</option>
+                                                <option value="LD">Lakshadweep</option>
+                                                <option value="PY">Puducherry</option>
+                                            </select>
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="postal_code">Postal Code</label>
-                                        <input type="number" name="postal_code" placeholder="Enter Postal Number...">
-                                        <label for="country" style="margin-left: 20px">Country</label>
-                                        <input type="text" name="country" value="India">
+                                        <div id="form_addresslist">
+                                            <label for="postal_code">Postal Code</label>
+                                            <input type="number" name="postal_code" placeholder="Enter Postal Number...">
+                                            <label for="country">Country</label>
+                                            <input type="text" name="country" value="India">
+                                        </div>
                                     </li>
                                 </ul>
                             </fieldset>
-                        </form>
-                        <form class="form_address_data2" style="margin-top: 10px">
+                        </div>
+                        <div class="form_address_data2">
                             <fieldset>
-                                <legend style="border: 2px solid purple">Single Address</legend>
-                                <div style="display: flex;">
+                                <legend>Single Address</legend>
+                                <div id="address_data2">
                                     <p>Are Mailing Address and Residential Address same</p>
                                     <input type="checkbox"name="mail_address">
-                                    <label for="mail_address" style="margin-top: 14px">Yes</label>
+                                    <label for="mail_address">Yes</label>
                                 </div>
                             </fieldset>
-                        </form>
-                        <form class="form_address_data" style="margin-top: 20px">
+                        </div>
+                        <div class="form_address_data">
                             <fieldset>
-                                <legend style="border: 2px solid purple">Residential Address</legend>
+                                <legend>Residential Address</legend>
                                 <ul> 
                                     <li>
-                                    <label for="address1">Address 1</label>
-                                    <input name="address1" placeholder="Enter Address 1.." type="text">
+                                        <div id="form_addresslist">
+                                            <label for="address1">Address 1</label>
+                                            <input name="address1" placeholder="Enter Address 1.." type="text">
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="address2">Address 2</label>
-                                        <input name="address1" placeholder="Enter Address 2.." type="text">
+                                        <div id="form_addresslist">
+                                            <label for="address2">Address 2</label>
+                                            <input name="address1" placeholder="Enter Address 2.." type="text">
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="suburb">Suburb</label>
-                                        <input name="suburb" placeholder="Enter Suburb.." type="text">
-                                        <label for="suburb" style="margin-left: 20px">State</label>
-                                        <select for="state">
-                                            <option selected disabled hidden>None</option>
-                                            <option value="AP">Andhra Pradesh</option>
-                                            <option value="AR">Arunachal Pradesh</option>
-                                            <option value="AS">Assam</option>
-                                            <option value="BR">Bihar</option>
-                                            <option value="CT">Chhattisgarh</option>
-                                            <option value="GA">Gujarat</option>
-                                            <option value="HR">Haryana</option>
-                                            <option value="HP">Himachal Pradesh</option>
-                                            <option value="JK">Jammu and Kashmir</option>
-                                            <option value="GA">Goa</option>
-                                            <option value="JH">Jharkhand</option>
-                                            <option value="KA">Karnataka</option>
-                                            <option value="KL">Kerala</option>
-                                            <option value="MP">Madhya Pradesh</option>
-                                            <option value="MH">Maharashtra</option>
+                                        <div id="form_addresslist">
+                                            <label for="suburb">Suburb</label>
+                                            <input name="suburb" placeholder="Enter Suburb.." type="text">
+                                            <label for="suburb">State</label>
+                                            <select for="state">
+                                                <option selected disabled hidden>None</option>
+                                                <option value="AP">Andhra Pradesh</option>
+                                                <option value="AR">Arunachal Pradesh</option>
+                                                <option value="AS">Assam</option>
+                                                <option value="BR">Bihar</option>
+                                                <option value="CT">Chhattisgarh</option>
+                                                <option value="GA">Gujarat</option>
+                                                <option value="HR">Haryana</option>
+                                                <option value="HP">Himachal Pradesh</option>
+                                                <option value="JK">Jammu and Kashmir</option>
+                                                <option value="GA">Goa</option>
+                                                <option value="JH">Jharkhand</option>
+                                                <option value="KA">Karnataka</option>
+                                                <option value="KL">Kerala</option>
+                                                <option value="MP">Madhya Pradesh</option>
+                                                <option value="MH">Maharashtra</option>
                                                 <option value="MN">Manipur</option>
                                                 <option value="ML">Meghalaya</option>
-                                            <option value="MZ">Mizoram</option>
-                                            <option value="NL">Nagaland</option>
-                                            <option value="OR">Odisha</option>
-                                            <option value="PB">Punjab</option>
-                                            <option value="RJ">Rajasthan</option>
-                                            <option value="SK">Sikkim</option>
-                                            <option value="TN">Tamil Nadu</option>
-                                            <option value="TG">Telangana</option>
-                                            <option value="TR">Tripura</option>
-                                            <option value="UT">Uttarakhand</option>
-                                            <option value="UP">Uttar Pradesh</option>
-                                            <option value="WB">West Bengal</option>
-                                            <option value="AN">Andaman and Nicobar Islands</option>
-                                            <option value="CH">Chandigarh</option>
-                                            <option value="DN">Dadra and Nagar Haveli</option>
-                                            <option value="DD">Daman and Diu</option>
-                                            <option value="DL">Delhi</option>
-                                            <option value="LD">Lakshadweep</option>
-                                            <option value="PY">Puducherry</option>
-                                        </select>
+                                                <option value="MZ">Mizoram</option>
+                                                <option value="NL">Nagaland</option>
+                                                <option value="OR">Odisha</option>
+                                                <option value="PB">Punjab</option>
+                                                <option value="RJ">Rajasthan</option>
+                                                <option value="SK">Sikkim</option>
+                                                <option value="TN">Tamil Nadu</option>
+                                                <option value="TG">Telangana</option>
+                                                <option value="TR">Tripura</option>
+                                                <option value="UT">Uttarakhand</option>
+                                                <option value="UP">Uttar Pradesh</option>
+                                                <option value="WB">West Bengal</option>
+                                                <option value="AN">Andaman and Nicobar Islands</option>
+                                                <option value="CH">Chandigarh</option>
+                                                <option value="DN">Dadra and Nagar Haveli</option>
+                                                <option value="DD">Daman and Diu</option>
+                                                <option value="DL">Delhi</option>
+                                                <option value="LD">Lakshadweep</option>
+                                                <option value="PY">Puducherry</option>
+                                            </select>
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="postal_code">Postal Code</label>
-                                        <input type="number" name="postal_code" placeholder="Enter Postal Number...">
-                                        <label for="country" style="margin-left: 20px">Country</label>
-                                        <input type="text" name="country" value="India">
+                                        <div id="form_addresslist">
+                                            <label for="postal_code">Postal Code</label>
+                                            <input type="number" name="postal_code" placeholder="Enter Postal Number...">
+                                            <label for="country">Country</label>
+                                            <input type="text" name="country" value="India">
+                                        </div>
                                     </li>
                                 </ul>
                             </fieldset>
-                        </form>
+                        </div>
                     </fieldset>
                 </section>
                 <section class="form_submit">
                     <fieldset>
-                        <ul style="display:block; margin-bottom: 20px;">
+                        <ul>
                             <li>
-                                <label for="IHI_number">IHI Number 80036</label>
-                                <input name="IHI_number" placeholder="Enter IHI Number.." type="number">
+                                <div id="form_submit_div">
+                                    <label for="IHI_number">IHI Number 80036</label>
+                                    <input name="IHI_number" placeholder="Enter IHI Number.." type="number">
+                                </div>
                             </li>
                             <li>
-                                <label for="number_status">Number Status</label>
-                                <input name="number_status" placeholder="Enter Number Status.." type="number">
+                                <div id="form_submit_div">
+                                    <label for="number_status">Number Status</label>
+                                    <input name="number_status" placeholder="Enter Number Status.." type="number">
+                                </div>
                             </li>
                             <li>
-                                <label for="record_status">Record Status</label>
-                                <input name="record_status" placeholder="Enter Record Status.." type="text">
+                                <div id="form_submit_div">
+                                    <label for="record_status">Record Status</label>
+                                    <input name="record_status" placeholder="Enter Record Status.." type="text">
+                                </div>
                             </li>
                             <li>
-                                <label for="last_update">Enter Last Updated</label>
-                                <input name="last_update" placeholder="Enter Last Update.." type="text">
+                                <div id="form_submit_div">
+                                    <label for="last_update">Enter Last Updated</label>
+                                    <input name="last_update" placeholder="Enter Last Update.." type="text">
+                                </div>
                             </li>
                         </ul>
                     </fieldset>
                 </section>
-                <li style="list-style-type: none;">
-                    <button type="submit" style="margin: 10px; width: 100px; background-color: purple; color: white;">Submit</button>
-                    <button style="margin: 10px 30px 10px; width: 100px; background-color: purple; color: white;">Clear</button>
-                </li>
+                <button type="submit">Submit</button>
+                <input type="reset" form="complete_form" value=Clear>
            </form>
         </div>
     </body>

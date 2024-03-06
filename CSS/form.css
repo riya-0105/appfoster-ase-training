@@ -1,4 +1,5 @@
 .forms {
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -57,7 +58,7 @@ input[type="radio"] {
 }
 
 .form_contact {
-    height: 34vh;
+    height: 33vh;
     border: 2px solid purple;
 }
 
@@ -65,7 +66,7 @@ fieldset {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 29vh;
+    height: 28vh;
     border: 1px solid plum;
 }
 
@@ -73,33 +74,38 @@ fieldset {
     height: 80vh;
     border: 2px solid purple;
 }
-.form_address fieldset, .form_address fieldset legend {
-    border: none;
+.form_address fieldset legend {
+    border: 2px solid purple;
+}
+
+.form_address fieldset {
+    height: 75vh;
 }
 
 .form_address_data fieldset {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 10px;
-    height: 23vh;
+    height: 22vh;
     border: 1px solid plum;
+    margin-bottom: 20px;
 }
 
 .form_address_data2 fieldset { 
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 10px;
-    height: 15vh;
+    height: 10vh;
     border: 1px solid plum;   
 }
 
 .form_submit {
-    height: 32vh;
+    height: 28vh;
     border: 2px solid purple;
 }
 .form_submit fieldset {
     margin-left: 20px;
-    height: 27vh;
+    height: 21vh;
 }
 
 
@@ -115,3 +121,93 @@ fieldset {
     margin-bottom: 15px;
 }
 
+#form_div p {
+    margin: 0px 125px; 
+    font-size: 12px;
+}
+
+#form_div label {
+    width: 110px;
+    margin-top: 0px;
+}
+
+#form_div input[type="text"] {
+    width: 200px;
+}
+
+#valid_date_label {
+    width: 70px !important;
+}
+
+
+#form_phone {
+    display: flex;
+}
+
+#form_phone p {
+    width: 110px;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+#form_phone th {
+    font-weight: normal;
+}
+
+#form_contactlist label {
+    width: 120px;
+    margin-right: 0px;
+}
+
+.form_address_data fieldset legend {
+    border: 2px solid purple;
+}
+
+#form_addresslist label {
+    margin-right: 0px;
+    width: 80px;
+}
+
+#form_addresslist input {
+    width: 150px;
+}
+
+#form_addresslist select {
+    width: 100px;
+}
+
+.form_address_data2 fieldset legend {
+    border: 2px solid purple;
+}
+
+#address_data2 {
+    display: inline-flex;
+}
+
+.form_address_data {
+    margin-top: 20px;
+}
+
+
+#form_submit_div label {
+    width: 150px;
+}
+
+#form_submit_div input {
+    width: 200px;
+}
+
+button[type="submit"] {
+    margin: 10px; width: 100px; 
+    background-color: purple; 
+    color: white;
+}
+
+input[type="reset"] {
+    margin: 10px; width: 100px; 
+    background-color: purple; 
+    color: white;
+}
+#form_phone table {
+    margin-left: 10px;
+}
