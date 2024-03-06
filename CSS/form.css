@@ -7,6 +7,7 @@
     width: 600px;
     height: auto;
     border: 1px solid black;
+    overflow: scroll hiddden;
 }
 
 .complete_form {
@@ -14,7 +15,7 @@
 }
 
 .form_payment {
-    height: 42vh;
+    height: 310px;
     border: 2px solid purple;
 }
 
@@ -26,7 +27,7 @@ legend {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 36vh;
+    height: 270px;
     border: 1px solid plum;
 }
 
@@ -58,7 +59,7 @@ input[type="radio"] {
 }
 
 .form_contact {
-    height: 33vh;
+    height: 250px;
     border: 2px solid purple;
 }
 
@@ -66,12 +67,12 @@ fieldset {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    height: 28vh;
+    height: 210px;
     border: 1px solid plum;
 }
 
 .form_address {
-    height: 80vh;
+    height: 570px;
     border: 2px solid purple;
 }
 .form_address fieldset legend {
@@ -79,33 +80,43 @@ fieldset {
 }
 
 .form_address fieldset {
-    height: 75vh;
+    height: 520px;
 }
 
 .form_address_data fieldset {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 10px;
-    height: 22vh;
+    height: 160px;
     border: 1px solid plum;
     margin-bottom: 20px;
+}
+
+
+#address_data2 label {
+    align-items: center;
+    margin: auto;
+}
+
+#address_data2 input {
+    margin-left: 70px;
 }
 
 .form_address_data2 fieldset { 
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 10px;
-    height: 10vh;
+    height: 60px;
     border: 1px solid plum;   
 }
 
 .form_submit {
-    height: 28vh;
+    height: 200px;
     border: 2px solid purple;
 }
 .form_submit fieldset {
     margin-left: 20px;
-    height: 21vh;
+    height: 160px;
 }
 
 
