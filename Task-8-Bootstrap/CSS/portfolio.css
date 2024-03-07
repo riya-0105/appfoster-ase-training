@@ -1,0 +1,246 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: lavender !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: lavender;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lavender;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: lavender;
+}
+
+.portfolio_container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-bg {
+    background-color: lavender;
+}
+
+.navbar {
+    background-color: lavender;
+}
+
+.navbar-horiz div {
+    width: 320px;
+    margin-left: 0px;
+}
+
+.navbar-horiz {
+    display: inline !important;
+    justify-content: flex-start;
+    margin-left: 100px;
+    height: 100px;
+}
+
+
+.navbar-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    height: 100%;
+    width: 100px;
+}
+
+
+.navbar_container {
+    width: 100%;
+    height: 100%;
+}
+
+.search-contain {
+    margin-left: 0px;
+}
+
+.bg-purple {
+    background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-menu-1767818-1502398.png?f=webp&w=256') !important;
+}
+
+.nav-width {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.nav-brand-div {
+    display: inline;
+    margin-top: 30px;
+    color: black;
+}
+
+
+.btn-outline-purple {
+    border: 2px solid plum !important;
+}
+
+.btn-outline-purple:hover {
+    background-color: plum !important;
+} 
+
+
+@media (max-width: 768px) {
+    .navbar-horiz div {
+        max-width: 400px;;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-width_container {
+        max-width: 300px;
+    }
+}
+
+.search-width-container {
+    max-width: 450px !important;
+    width: 100%;
+}
+
+.ms-n5 {
+    margin-left: -40px;
+} 
+
+.img_search {
+    width: 20px;
+    border-radius: 30%;
+}
+
+
+.menu_dropdown {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.align_items {
+    margin-left: 10px;
+    margin-top: 90px;
+}
+
+.navbar-toggle {
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.toggle_bg {
+    top: 0;
+    background-color: lavender;
+    width: 80px;
+    height: 100%;
+}
+
+.toggle_align {
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.collapse_list {
+    display: inline-grid;
+    width: 90px;
+    height: 636px;
+    background-color: lavender;
+}
+
+.collapse_list li {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.vertical_line {
+    border: 1px solid black;
+    width: 1px !important;
+    height: 30px;
+    background-color: black;
+    margin-right: 10px !important;
+}
+
+
+.avatar_img {
+    width: 45px !important;
+    height: 45px !important;
+    margin-right: 0px !important;
+    border: 2px solid black;
+}
+
+.body_container {
+    margin-left: 10px;
+    background-color: white;
+    height: 636px;
+    width: 100%;
+}
+.font_lighter {
+    font-weight: light !important;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > thead > tr >th,
+.table-borderless > thead > tr >td,
+.table-borderless > tfoot > tr >th,
+.table-borderless > tfoot > tr >td {
+    border: none;
+}
+
+
+.table {
+    width: 300px !important;
+    margin-right: 0px !important;
+}
+.font_weight {
+    font-weight: lighter;
+}
+
+.width_box {
+    width: 10px !important;
+}
+
+.border_alert {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+}
+
+.color_text {
+    font-weight: 400;
+    color: orange;
+}
+
+.color_card {
+    background-color: wheat !important;
+}
+
+.card {
+    z-index: 0 !important;
+}
+
+.brand_div {
+    width: 20px !important;
+}
