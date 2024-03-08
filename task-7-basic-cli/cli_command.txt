@@ -1,0 +1,117 @@
+cd Desktop
+
+C:\Users\lenovo\Documents\appfoster-ase-training> ls  
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training> ls    
+
+
+    Directory: C:\Users\lenovo\Documents\appfoster-ase-training
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/6/2024  11:54 AM                task-3-basic-html
+d-----          3/6/2024  11:54 AM                task-5-basic-css
+d-----          3/6/2024  11:55 AM                task-6-htmlform
+d-----          3/6/2024  11:58 AM                Task-8-Bootstrap
+-a----          3/5/2024  11:02 PM             31 README.md
+
+
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training> mkdir task-7-basic-cli
+
+
+    Directory: C:\Users\lenovo\Documents\appfoster-ase-training
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/8/2024   4:34 PM                task-7-basic-cli
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training> cd task-7-basic-cli
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> notepad cli.txt
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> copy cli.txt cli1.txt
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> del cli1.txt
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> ren cli.txt cli_command.txt
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> move file_rename.txt ../
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> cp cli_command.txt ../file_name.txt
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> curl https://en.wikipedia.org/wiki/Doraemon
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : <!DOCTYPE html>
+                    <html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled
+                    vector-feature-sticky-header-disabled vector-feature-page-tools-...
+RawContent        : HTTP/1.1 200 OK
+                    x-content-type-options: nosniff
+                    content-language: en
+                    accept-ch:
+                    vary: Accept-Encoding,Cookie
+                    age: 69499
+                    x-cache: cp5018 miss, cp5018 hit/60
+                    x-cache-status: hit-front
+                    server-ti...
+Forms             : {searchform}
+Headers           : {[x-content-type-options, nosniff], [content-language, en], [accept-ch, ], [vary, Accept-Encoding,Cookie]...}
+Images            : {@{innerHTML=; innerText=; outerHTML=<IMG aria-hidden=true class=mw-logo-icon alt="" src="/static/images/icons/wikipedia.png" width=50
+                    height=50>; outerText=; tagName=IMG; aria-hidden=true; class=mw-logo-icon; alt=; src=/static/images/icons/wikipedia.png; width=50; height=50},  
+                    @{innerHTML=; innerText=; outerHTML=<IMG class=mw-logo-wordmark style="HEIGHT: 1.12em; WIDTH: 7.5em" alt=Wikipedia
+                    src="/static/images/mobile/copyright/wikipedia-wordmark-en.svg">; outerText=; tagName=IMG; class=mw-logo-wordmark; style=HEIGHT: 1.12em;        
+                    WIDTH: 7.5em; alt=Wikipedia; src=/static/images/mobile/copyright/wikipedia-wordmark-en.svg}, @{innerHTML=; innerText=; outerHTML=<IMG
+                    class=mw-logo-tagline style="HEIGHT: 0.81em; WIDTH: 7.31em" alt="The Free Encyclopedia"
+                    src="/static/images/mobile/copyright/wikipedia-tagline-en.svg" width=117 height=13>; outerText=; tagName=IMG; class=mw-logo-tagline;
+                    style=HEIGHT: 0.81em; WIDTH: 7.31em; alt=The Free Encyclopedia; src=/static/images/mobile/copyright/wikipedia-tagline-en.svg; width=117;        
+                    height=13}, @{innerHTML=; innerText=; outerHTML=<IMG class=mw-file-element alt="This is a good article. Click here for more information."       
+                    src="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/19px-Symbol_support_vote.svg.png" width=19 height=20
+                    data-file-height="185" data-file-width="180"
+                    srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/29px-Symbol_support_vote.svg.png 1.5x,
+                    //upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/39px-Symbol_support_vote.svg.png 2x" decoding="async">; outerText=;      
+                    tagName=IMG; class=mw-file-element; alt=This is a good article. Click here for more information.;
+                    src=//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/19px-Symbol_support_vote.svg.png; width=19; height=20;
+                    data-file-height=185; data-file-width=180;
+                    srcset=//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/29px-Symbol_support_vote.svg.png 1.5x,
+                    //upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/39px-Symbol_support_vote.svg.png 2x; decoding=async}...}
+InputFields       : {@{innerHTML=; innerText=; outerHTML=<INPUT aria-haspopup=true role=button aria-label="Main menu" id=vector-main-menu-dropdown-checkbox
+                    class="vector-dropdown-checkbox " type=checkbox data-event-name="ui.dropdown-vector-main-menu-dropdown">; outerText=; tagName=INPUT;
+                    aria-haspopup=true; role=button; aria-label=Main menu; id=vector-main-menu-dropdown-checkbox; class=vector-dropdown-checkbox ; type=checkbox;   
+                    data-event-name=ui.dropdown-vector-main-menu-dropdown}, @{innerHTML=; innerText=; outerHTML=<INPUT aria-label="Search Wikipedia"
+                    id=searchInput title="Search Wikipedia [f]" class=cdx-text-input__input accessKey=f name=search autocapitalize="sentences" placeholder="Search  
+                    Wikipedia">; outerText=; tagName=INPUT; aria-label=Search Wikipedia; id=searchInput; title=Search Wikipedia [f]; class=cdx-text-input__input;   
+                    accessKey=f; name=search; autocapitalize=sentences; placeholder=Search Wikipedia}, @{innerHTML=; innerText=; outerHTML=<INPUT type=hidden       
+                    value=Special:Search name=title>; outerText=; tagName=INPUT; type=hidden; value=Special:Search; name=title}, @{innerHTML=; innerText=;
+                    outerHTML=<INPUT aria-haspopup=true role=button aria-label="Personal tools" id=vector-user-links-dropdown-checkbox
+                    class="vector-dropdown-checkbox " type=checkbox data-event-name="ui.dropdown-vector-user-links-dropdown">; outerText=; tagName=INPUT;
+                    aria-haspopup=true; role=button; aria-label=Personal tools; id=vector-user-links-dropdown-checkbox; class=vector-dropdown-checkbox ;
+                    type=checkbox; data-event-name=ui.dropdown-vector-user-links-dropdown}...}
+Links             : {@{innerHTML=Jump to content; innerText=Jump to content; outerHTML=<A class=mw-jump-link href="#bodyContent">Jump to content</A>;
+                    outerText=Jump to content; tagName=A; class=mw-jump-link; href=#bodyContent}, @{innerHTML=<SPAN>Main page</SPAN>; innerText=Main page;
+                    outerHTML=<A title="Visit the main page [z]" accessKey=z href="/wiki/Main_Page"><SPAN>Main page</SPAN></A>; outerText=Main page; tagName=A;     
+                    title=Visit the main page [z]; accessKey=z; href=/wiki/Main_Page}, @{innerHTML=<SPAN>Contents</SPAN>; innerText=Contents; outerHTML=<A
+                    title="Guides to browsing Wikipedia" href="/wiki/Wikipedia:Contents"><SPAN>Contents</SPAN></A>; outerText=Contents; tagName=A; title=Guides to  
+                    browsing Wikipedia; href=/wiki/Wikipedia:Contents}, @{innerHTML=<SPAN>Current events</SPAN>; innerText=Current events; outerHTML=<A
+                    title="Articles related to current events" href="/wiki/Portal:Current_events"><SPAN>Current events</SPAN></A>; outerText=Current events;        
+                    tagName=A; title=Articles related to current events; href=/wiki/Portal:Current_events}...}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 629307
+
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> cat cli_command.txt | measure -w
+
+Lines Words Characters Property
+----- ----- ---------- --------
+          0
+
+PS C:\Users\lenovo\Documents\appfoster-ase-training\task-7-basic-cli> curl https://en.wikipedia.org/wiki/Doraemon | measure -w 
+
+Lines Words Characters Property
+----- ----- ---------- --------
+      31691
+
