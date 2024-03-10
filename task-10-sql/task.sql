@@ -1,0 +1,29 @@
+-- Online SQL Editor to Run SQL Online.
+-- Use the editor to create new tables, insert data and all other SQL operations.
+-- Write a sql command 
+-- 1. To insert values in customers table.
+-- 2. To insert multiple values in customers table. 
+-- 3. To get number of customers per country. 
+-- 4. To get the orders who have amount between 100 to 500.
+-- 5. To get the first name and last name of customers who have bought Keypad.
+-- 6. To get the name of the countries where shipping status is Pending.
+-- 7. To get the number of orders per customer.
+
+-- Sol. 1
+-- INSERT INTO Customers(customer_id, first_name, last_name, age, country) VALUES(6, "Riya", "G", 90, "INDIA");
+-- SELECT * FROM Customers;
+-- Sol. 2
+-- INSERT INTO Customers VALUES(7, "Noah", "Anderson", 34, "USA"), (8, "Christan", "Hemsworth", 89, "UK");
+-- Sol. 3
+-- SELECT country, COUNT(Customer_id) FROM Customers GROUP BY country;
+-- Sol. 4
+-- SELECT * FROM Orders WHERE amount BETWEEN 100 AND 500;
+-- Sol. 5
+-- SELECT first_name as "FIRST NAME", last_name AS "LAST NAME" FROM Customers JOIN Orders ON (Customers.customer_id = Orders.customer_id) WHERE item = "Keyboard";
+-- Sol. 6
+-- SELECT country, status FROM Customers JOIN Shippings ON Customers.customer_id = Shippings.customer WHERE status = "Pending";  
+-- Sol. 7
+-- SELECT customer_id, COUNT(order_id) FROM Orders GROUP BY customer_id;
+-- or
+-- SELECT (first_name || " " || last_name) AS Name, COUNT(Orders.customer_id) FROM Orders JOIN Customers ON Customers.customer_id = Orders.customer_id GROUP BY Orders.customer_id;
+
