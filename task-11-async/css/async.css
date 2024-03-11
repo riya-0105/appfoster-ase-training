@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid lightgray;
+    box-shadow: 10px 10px 10px 10px lightgray;
+}
+
+.container_data {
+    display: grid;
+    width: 50%;
+    margin: 10px 10px 10px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: 'Sans-serif', 'Arial', 'Verdana', 'Helvetica';
+}
+
+.action_data {
+    display: grid;
+    width: 50%;
+    margin: 10px 10px 10px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: 'Sans-serif', 'Arial', 'Verdana', 'Helvetica';
+}
+
+h4 {
+    margin: 10px auto;
+}

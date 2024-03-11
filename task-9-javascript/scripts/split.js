@@ -5,7 +5,7 @@ function handlesubmit(e) {
     let split = parseInt(data.get("count"));
     let results = document.querySelector(".results_container");
     results.innerHTML = "";
-    if(number > split) {
+    if(number > split && number >=0 && split >= 0) {
         let a = [];
         let x = parseInt(number/split);
         let y = number % split;
@@ -40,7 +40,3 @@ function handlesubmit(e) {
 document.addEventListener("DOMContentLoaded", (e) => {
     document.getElementsByClassName("form_data")[0].addEventListener("submit", handlesubmit)
 })
-
-
-
-
