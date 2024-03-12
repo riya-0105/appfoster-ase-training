@@ -1,5 +1,3 @@
-import 'bootstrap/js/dist/util';
-import 'bootstrap/dist/js';
 
 async function fetchData() {
     try {
@@ -12,7 +10,9 @@ async function fetchData() {
     }
 }
 
-async function renderData() {
+
+
+async function renderData(pageNumber = 1, entriesPage = 4) {
     const container = document.querySelector(".container_data");
     const action_container = document.getElementsByClassName("action_container")[0];
     const data = await fetchData();
@@ -20,6 +20,10 @@ async function renderData() {
         container.innerHTML = "No data Found!!!";
         return;
     }
+    container.innerHTML = "";
+    const totalPages = Math.ceil(data.length/entriesPage);
+    const startIndex = (pageNumber - 1) * entriesPage;
+    const endIndex = Math.min(startIndex + entriesPage, data.length);
     const new_div_header = document.createElement('div');
     new_div_header.style.display = "flex";
     new_div_header.style.width = "90%";
@@ -27,14 +31,15 @@ async function renderData() {
     const new_header_action = document.createElement("h4");
     new_header_action.textContent = "Action";
     new_header_action.style.marginLeft = "auto";
-    new_header_action.style.marginRight = "2%";
+    new_header_action.style.marginRight = "1.05%";
     newHeader.textContent = "UserName";
     new_div_header.appendChild(newHeader);
     new_div_header.appendChild(new_header_action);
     const newDiv = document.createElement('div');
     newDiv.classList.add("data_style");
     newDiv.appendChild(new_div_header);
-    data.forEach(item => {
+    for(let i=startIndex; i<endIndex; i++) {
+        const item = data[i];
         const new_Div_body = document.createElement('div');
         new_Div_body.style.display = "flex";
         new_Div_body.classList.add("data_body");
@@ -44,11 +49,15 @@ async function renderData() {
         new_div_info.classList.add("collapse");
         const new_div_span = document.createElement('span');
         new_div_span.innerHTML = `
-        ID = ${item.id} <br>
-        Email ID = ${item.email} <br>
-        Gender = ${item.gender} <br>
-        Status = ${item.status} <br>
+        <div>
+            ID = ${item.id} <br>
+            Email ID = ${item.email} <br>
+            Gender = ${item.gender} <br>
+            Status = ${item.status} <br>
+        </div>
         `; 
+        new_div_span.classList.add("span_container");
+        new_div_span.style.marginRight = "5%";
         new_div_info.appendChild(new_div_span);
         new_Div_body.width = "100%";
         const newH3 = document.createElement('h3');
@@ -56,27 +65,74 @@ async function renderData() {
         newH3.style.width = "82%";
         const newButton = document.createElement("button");
         newButton.style.marginLeft = "auto";
-        newButton.style.marginRight = "14%";
+        newButton.style.marginRight = "10%";
         const hr = document.createElement('hr');
         hr.style.width = "95%";
         hr.style.borderColor = "black";
-        newButton.style.backgroundImage = "url(https://icones.pro/wp-content/uploads/2021/05/symbole-de-l-oeil-bleu.png)";
         newButton.style.justifyContent = "flex-end";
         newButton.dataset.bsToggle = "collapse";
-        newButton.dataTarget = `collapse_info_${item.id}`;
+        newButton.dataset.bsTarget =  `#collapse_info_${item.id}`;
         new_Div_body.appendChild(newH3);
         new_Div_body.appendChild(newButton);
         newDiv.appendChild(new_Div_body);
         newDiv.appendChild(new_div_info);
-        newDiv.appendChild(hr);
         newDiv.appendChild(new_div_info);
-        const toggle_element = document.getElementById("collapse_info");
-        new bootstrap.Collapse(toggle_element);  
+        newDiv.appendChild(hr);
+        container.appendChild(newDiv);
+        newButton.addEventListener("click", () => {
+            const collapseElements = document.querySelector(`#collapse_info_${item.id}`);
+            collapseElements.classList.toggle("show");
+        })
+    }
+    // pagination
+    const paginationContainer = document.getElementsByClassName('pagination')[0];
+    paginationContainer.innerHTML = "";
+    paginationContainer.classList.add("pagination");
+    paginationContainer.setAttribute("id", "pagination");
+
+    // previous button
+    const prevButton = document.createElement('button');
+    prevButton.textContent = "Prev";
+    prevButton.addEventListener('click', () => {
+        if(pageNumber > 1) {
+            renderData(pageNumber - 1, entriesPage);
+        }
+        else {
+            paginationContainer.innerHTML = `
+            <div>No previous Element!!</div>
+            `;
+        }
     })
-    console.log(container);
-    container.appendChild(newDiv);
+    paginationContainer.appendChild(prevButton);
+
+
+    // Index for each page
+    for(let i=1; i<=totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i;
+        pageButton.addEventListener("click", () => {
+            renderData(i, entriesPage);
+        });
+        paginationContainer.appendChild(pageButton);
+    }
+
+    // next page
+    const nextPage = document.createElement('button');
+    nextPage.textContent = "Next";
+    nextPage.addEventListener("click",  () => {
+        if(pageNumber < totalPages) {
+            renderData(pageNumber + 1, entriesPage);
+        }
+        else {
+            paginationContainer.innerHTML = `
+            <div>No Next Page!!</div>
+            `
+        }
+    })
+    paginationContainer.appendChild(nextPage);
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
-    renderData()
+    renderData(1);
 })

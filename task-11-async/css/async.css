@@ -41,3 +41,73 @@
     width: 100%;
 }
 
+.collapse {
+    display: flex;
+    margin-top: 3%;
+}
+
+.show {
+    display: flex;
+}
+
+span {
+    margin-left: auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+
+.container button {
+    background-image: url("https://icones.pro/wp-content/uploads/2021/05/symbole-de-l-oeil-bleu.png");
+    width: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+}
+
+.collapsing {
+    display: flex;
+    margin-left: auto;
+}
+
+
+.span_container:nth-child(n)::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.span_container:nth-child(n)::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.span_container:nth-child(n)  {
+    color: #318CE7;
+    width: 40%;
+    overflow-x: scroll;
+    scrollbar-width: 2%;
+    text-align: left;
+    box-sizing: content-box;
+}
+
+.span_container div {
+    margin: 5% 5% 5% 5%;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button {
+    background-color: #318CE7;
+    margin-left: 0.25%;
+}
+
+.pageButton button {
+    background-color: #318CE7;
+}
+
+.paginationContainer div {
+    color: red;
+}
