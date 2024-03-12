@@ -95,12 +95,17 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
     prevButton.textContent = "Prev";
     prevButton.addEventListener('click', () => {
         if(pageNumber > 1) {
+            const buttons = paginationContainer.querySelectorAll("button");
+            buttons.forEach(btn => btn.classList.remove("active"));
             renderData(pageNumber - 1, entriesPage);
         }
         else {
             paginationContainer.innerHTML = `
-            <div>No previous Element!!</div>
+                <div>No previous Element!!</div>
             `;
+            setInterval(() => {
+                location.reload();
+            }, 1000)
         }
     })
     paginationContainer.appendChild(prevButton);
@@ -110,7 +115,11 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
     for(let i=1; i<=totalPages; i++) {
         const pageButton = document.createElement('button');
         pageButton.textContent = i;
+        // console.log("button", pageButton)
+        pageButton.classList.remove("active_button");
         pageButton.addEventListener("click", () => {
+            pageButton.classList.add("active_button");
+            // console.log(pageButton)
             renderData(i, entriesPage);
         });
         paginationContainer.appendChild(pageButton);
@@ -127,6 +136,9 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
             paginationContainer.innerHTML = `
             <div>No Next Page!!</div>
             `
+            setInterval(() => {
+                location.reload()
+            }, 1000);
         }
     })
     paginationContainer.appendChild(nextPage);
