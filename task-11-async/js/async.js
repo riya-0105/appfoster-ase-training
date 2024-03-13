@@ -11,7 +11,6 @@ async function fetchData() {
 }
 
 
-
 async function renderData(pageNumber = 1, entriesPage = 4) {
     const container = document.querySelector(".container_data");
     const data = await fetchData();
@@ -77,6 +76,11 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
         newDiv.appendChild(new_div_info);
         newDiv.appendChild(hr);
         container.appendChild(newDiv);
+        console.log("height", new_div_span.offsetHeight)
+        // newButton.addEventListener("click", function() {
+        //     console.log(document.querySelector(`#collapse_info_${item.id}`).offsetHeight)
+        //     document.querySelector(`#collapse_info_${item.id}`).classList.toggle("show");
+        // })
     }
     // pagination
     const paginationContainer = document.getElementsByClassName('pagination')[0];
