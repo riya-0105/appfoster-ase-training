@@ -14,7 +14,6 @@ async function fetchData() {
 
 async function renderData(pageNumber = 1, entriesPage = 4) {
     const container = document.querySelector(".container_data");
-    const action_container = document.getElementsByClassName("action_container")[0];
     const data = await fetchData();
     if(!data || data.length === 0) {
         container.innerHTML = "No data Found!!!";
@@ -76,13 +75,8 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
         new_Div_body.appendChild(newButton);
         newDiv.appendChild(new_Div_body);
         newDiv.appendChild(new_div_info);
-        newDiv.appendChild(new_div_info);
         newDiv.appendChild(hr);
         container.appendChild(newDiv);
-        newButton.addEventListener("click", () => {
-            const collapseElements = document.querySelector(`#collapse_info_${item.id}`);
-            collapseElements.classList.toggle("show");
-        })
     }
     // pagination
     const paginationContainer = document.getElementsByClassName('pagination')[0];
