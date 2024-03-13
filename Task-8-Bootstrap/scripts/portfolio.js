@@ -20,16 +20,15 @@ const callback = (mutationlist, observer) => {
     for(let mutation of mutationlist) {
         if(mutation.type === 'attributes' && mutation.attributeName === 'class') {
             if(navContent.classList.contains('show')) {
-                body_container.style.transform = "translateX(100px)";
+                body_container.style.transform = "translateX(6.25rem)";
                 body_container.style.width = "90%";
                 body_container.style.marginLeft = "10px";
             }
             else {
-                body_container.style.transform = "translateX(0)";
-                body_container.style.width = "99%";
+                body_container.style.transform = "translateX(0rem)";
+                body_container.style.width = "98%";
             }
             break;
-            observer.disconnect();
         }
     }
 }

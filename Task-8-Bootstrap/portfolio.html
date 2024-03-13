@@ -19,15 +19,15 @@
   <body>
     <div class="portfolio_container">
       <div class="navbar_container">
-        <nav class="navbar navbar-horiz align-items-center">
-          <div class="align-items-center">
+        <nav class="navbar navbar-horiz d-flex">
+          <div class="d-flex">
             <a
             class="navbar-brand h1 mt-3 ms-3 position-relative mw-10 mr-0 pr-0"
             href="#"
             target="_blank"
             >Portfolio</a
           >
-          <div class="ms-0 input-group d-flex p-0">
+          <div class="ms-0 input-group p-0 w-50 align-items-center">
             <input
               class="form-control border rounded-pill"
               type="search"
@@ -35,7 +35,7 @@
             />
             <span class="input-group-append">
               <button
-                class="btn btn-outline ms-n5 border rounded-pill bg-white"
+                class="btn btn-outline border rounded-pill bg-white ms-n5 p-2" 
                 type="button"
               >
                 <img
@@ -45,7 +45,7 @@
               </button>
             </span>
           </div>
-          <div class="navbar ms-auto d-flex align-items-center">
+          <div class="navbar me-0 d-flex align-items-center">
             <a class="ms-auto m-1 p-0" href="#" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,14 +118,14 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#navNavContent"
                 aria-controls="navNavContent"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-label="Toggle Navigation"
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
             </div>
 
-            <div class="collapse show collapse_list" id="navNavContent">
+            <div class="collapse collapse_list" id="navNavContent">
               <ul class="nav navbar-nav align_items">
                 <li class="nav-item">
                   <a
@@ -139,8 +139,7 @@
                       class="bi bi-house-door-fill"
                       viewBox="1 0 16 16"
                       alt="home_icon.png"
-                      margin-left="15px"
-                      width="30px"
+                      width="50%"
                     >
                       <path
                         d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
@@ -216,13 +215,13 @@
           </nav>
         </nav>
       </div>
-      <div class="mt-auto body_container rounded">
+      <div class="mt-auto body_container rounded" style="transform: translateX(0rem); width: 98%; margin-left: 10px;">
         <div class="d-flex align-items-center body_box">
           <h4 class="display-7 ms-4 mt-3">Projects</h4>
           <h5 class="ms-auto me-4 ms-4 mt-3 font_lighter">December, 12</h5>
         </div>
         <div class="">
-          <table class="table table-borderless ms-4 mt-4">
+          <table class="table table-borderless ms-5 mt-4">
             <tr>
               <th>45</th>
               <th>24</th>
@@ -236,11 +235,11 @@
           </table>
         </div>
         <div class="row m-2">
-          <div class="col m-0 p-0">
+          <div class="col m-0 p-0 ms-4">
             <div class="card w-75 rounded ms-4">
               <div class="card-title mt-2 ms-3 me-3">
-                <div class="d-flex align-items-center">
-                  <h6 class="font_weight">December 10, 2020</h6>
+                <div class="d-flex">
+                  <h6 class="font_weight ms-0 p-0">December 10, 2020</h6>
                   <a
                     href="#"
                     class="d-flex ms-auto align-items-center mb-1"
@@ -466,7 +465,7 @@
           </div>
         </div>
         <div class="row m-2 mt-5">
-          <div class="col m-0 p-0">
+          <div class="col m-0 p-0 ms-4">
             <div class="card w-75 rounded ms-4">
               <div class="card-title mt-2 ms-3 me-3">
                 <div class="d-flex align-items-center">

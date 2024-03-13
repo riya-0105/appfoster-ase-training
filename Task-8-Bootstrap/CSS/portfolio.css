@@ -5,7 +5,7 @@ body, html {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 20%;
 }
 
 ::-webkit-scrollbar-track {
@@ -43,13 +43,14 @@ body, html {
 }
 
 .navbar-horiz div {
-    width: 320px;
-    margin-left: 0px;
+    width: 100%;
+    margin-left: 0%;
 }
 
 .navbar-horiz {
-    margin-left: 100px;
-    height: 100px;
+    margin-left: 6.25rem;
+    margin-top: 1rem;
+    height: auto;
 }
 
 
@@ -57,9 +58,9 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 0px;
-    height: 100%;
-    width: 100px;
+    margin-top: 0%;
+    height: auto;
+    width: 6.25rem;
 }
 
 
@@ -69,61 +70,39 @@ body, html {
 }
 
 .search-contain {
-    margin-left: 0px;
+    margin-left: 0%;
 }
 
 .bg-purple {
     background-image: url('https://cdn.iconscout.com/icon/free/png-512/free-menu-1767818-1502398.png?f=webp&w=256') !important;
 }
 
-.nav-width {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 50px;
-    height: 50px;
-}
-
-
-.nav-brand-div {
+/* .nav-brand-div {
     display: inline;
-    margin-top: 30px;
+    margin-top: 10%;
     color: black;
-}
+} */
 
+.form-control {
+    height: 3rem;
+    width: 50%;
+}
 
 .btn-outline-purple {
-    border: 2px solid plum !important;
+    border: 0.125rem solid plum !important;
 }
 
 .btn-outline-purple:hover {
     background-color: plum !important;
 } 
 
-
-@media (max-width: 768px) {
-    .navbar-horiz div {
-        max-width: 400px;;
-    }
-}
-
-@media (max-width: 768px) {
-    .search-width_container {
-        max-width: 300px;
-    }
-}
-
-.search-width-container {
-    max-width: 450px !important;
-    width: 100%;
-}
-
 .ms-n5 {
-    margin-left: -40px;
+    margin-left: -2.5rem;
 } 
 
 .img_search {
-    width: 20px;
-    border-radius: 30%;
+    width: 1rem;
+    border-radius: 40%;
 }
 
 
@@ -134,13 +113,13 @@ body, html {
 }
 
 .align_items {
-    margin-left: 10px;
-    margin-top: 90px;
+    margin-left: 15%;
+    margin-top: 70%;
 }
 
 .navbar-toggle {
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 25%;
+    margin-top: 2.3rem;
     background-color: transparent;
     border: none;
 }
@@ -148,51 +127,53 @@ body, html {
 .toggle_bg {
     top: 0;
     background-color: lavender;
-    width: 80px;
-    height: 100%;
+    width: 2%;
+    height: auto;
 }
 
 .toggle_align {
     z-index: 0;
-    width: 100px;
-    height: 100px;
+    padding: 0%;
+    width: 6rem;
 }
 
 .collapse_list {
     display: inline-grid;
-    width: 90px;
-    height: 636px;
+    width: 100%;
+    height: auto;
     background-color: lavender;
 }
 
 .collapse_list li {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;
 }
 
 .vertical_line {
-    border: 1px solid black;
-    width: 1px !important;
-    height: 30px;
+    border: 0.0625rem solid black;
+    width: 0.0625rem !important;
+    height: auto;
     background-color: black;
-    margin-right: 10px !important;
+    margin-right: 0.625rem !important;
 }
 
 
 .avatar_img {
-    width: 45px !important;
-    height: 45px !important;
-    margin-right: 0px !important;
-    border: 2px solid black;
+    width: 2.81rem !important;
+    height: 2.81rem !important;
+    margin-right: 0% !important;
+    border: 0.125rem solid black;
 }
 
+
+
 .body_container {
-    margin-left: 10px;
+    margin-left: 0.75%;
     background-color: white;
-    height: 636px;
-    width: 90%;
-    transform: translateX(100px);
+    height: auto;
+    width: 98%;
+    transform: translateX(0%);
 }
 .font_lighter {
     font-weight: light !important;
@@ -207,24 +188,27 @@ body, html {
     border: none;
 }
 
+.body_box {
+    margin-left: 2rem;
+}
 
 .table {
-    width: 300px !important;
-    margin-right: 0px !important;
+    width: auto !important;
 }
+
 .font_weight {
     font-weight: lighter;
 }
 
 .width_box {
-    width: 10px !important;
+    width: 0.625rem !important;
 }
 
 .border_alert {
     display: flex;
     justify-content: center;
-    width: 100px;
-    height: 30px;
+    width: auto;
+    height: 1.8rem;
     background-color: white;
 }
 
@@ -242,5 +226,5 @@ body, html {
 }
 
 .brand_div {
-    width: 20px !important;
+    width: 0.625rem !important;
 }
