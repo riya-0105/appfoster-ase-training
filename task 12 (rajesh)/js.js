@@ -61,6 +61,7 @@ async function fetchUsers(){
         console.error('User data is undefined or null.');
         return;
       }
+      
       console.log('User data:', user);
       const userInfoModal = $('#userInfoModal');
       const userInfo = document.getElementById('user-info');
@@ -93,8 +94,9 @@ async function fetchUsers(){
             </table>
         `;
         }
+        userInfoModal.modal({show: true, backdrop: false, fade: false});
       })
-      userInfoModal.modal('show');
+      
     }catch (error){
       console.error('Error fetching user info:', error);
     }
