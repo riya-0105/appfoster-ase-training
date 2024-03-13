@@ -4,44 +4,44 @@
     justify-content: center;
     margin: auto;
     flex-direction: column;
-    width: 600px;
+    width: 37.5rem;
     height: auto;
-    border: 1px solid black;
+    border: 0.0625rem solid black;
     overflow: scroll hiddden;
 }
 
 .complete_form {
-    width: 600px;
+    width: 37.5rem;
 }
 
 .form_payment {
-    height: 310px;
-    border: 2px solid purple;
+    height: 19.5rem;
+    border: 0.125rem solid purple;
 }
 
 legend {
-    border: 2px solid purple;
+    border: 0.125rem solid purple;
 }
 
 .form_payment fieldset {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 270px;
-    border: 1px solid plum;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 16.875rem;
+    border: 0.0625rem solid plum;
 }
 
 form ul {
     display: flex;
     flex-direction: column;
-    padding-left: 0px;
-    margin-left: 5px;
+    padding-left: 0%;
+    margin-left: 2%;
     list-style-type: none;
 }
 
 form ul li {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 .input::-webkit-input-placeholder {
@@ -51,7 +51,7 @@ form ul li {
 label {
     display: inline-block;
     width: max-content;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 input[type="radio"] {
@@ -59,37 +59,37 @@ input[type="radio"] {
 }
 
 .form_contact {
-    height: 250px;
-    border: 2px solid purple;
+    height: 15.625rem;
+    border: 0.125rem solid purple;
 }
 
 fieldset {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 210px;
-    border: 1px solid plum;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 13.125rem;
+    border: 0.0625rem solid plum;
 }
 
 .form_address {
-    height: 570px;
-    border: 2px solid purple;
+    height: 35.625rem;
+    border: 0.125rem solid purple;
 }
 .form_address fieldset legend {
-    border: 2px solid purple;
+    border: 0.125rem solid purple;
 }
 
 .form_address fieldset {
-    height: 520px;
+    height: 32.5rem;
 }
 
 .form_address_data fieldset {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 10px;
-    height: 160px;
-    border: 1px solid plum;
-    margin-bottom: 20px;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 2%;
+    height: 10rem;
+    border: 0.0625rem solid plum;
+    margin-bottom: 4%;
 }
 
 
@@ -99,55 +99,55 @@ fieldset {
 }
 
 #address_data2 input {
-    margin-left: 70px;
+    margin-left: 4.375rem;
 }
 
 .form_address_data2 fieldset { 
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 10px;
-    height: 60px;
-    border: 1px solid plum;   
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 2%;
+    height: 3.75rem;
+    border: 0.0625rem solid plum;   
 }
 
 .form_submit {
-    height: 200px;
-    border: 2px solid purple;
+    height: 12.5rem;
+    border: 0.125rem solid purple;
 }
 .form_submit fieldset {
-    margin-left: 20px;
-    height: 160px;
+    margin-left: 4%;
+    height: 10rem;
 }
 
 
 .form_submit ul {
     display: flex;
-    margin-left: 10px;
-    padding-left: 0px;
+    margin-left: 2%;
+    padding-left: 0%;
 }
 
 .form_submit ul li {
-    margin-left: 0px;
+    margin-left: 0%;
     list-style-type: none;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 #form_div p {
-    margin: 0px 125px; 
-    font-size: 12px;
+    margin: 0% 7.8125rem; 
+    font-size: 0.84rem;
 }
 
 #form_div label {
-    width: 110px;
-    margin-top: 0px;
+    width: 6.875rem;
+    margin-top: 0%;
 }
 
 #form_div input[type="text"] {
-    width: 200px;
+    width: 12.5rem;
 }
 
 #valid_date_label {
-    width: 70px !important;
+    width: 4.375rem !important;
 }
 
 
@@ -156,9 +156,9 @@ fieldset {
 }
 
 #form_phone p {
-    width: 110px;
-    margin-top: 3px;
-    font-size: 16px;
+    width: 6.875rem;
+    margin-top: 1%;
+    font-size: 1rem;
 }
 
 #form_phone th {
@@ -166,29 +166,29 @@ fieldset {
 }
 
 #form_contactlist label {
-    width: 120px;
-    margin-right: 0px;
+    width: 7.5rem;
+    margin-right: 0%;
 }
 
 .form_address_data fieldset legend {
-    border: 2px solid purple;
+    border: 0.125rem solid purple;
 }
 
 #form_addresslist label {
-    margin-right: 0px;
-    width: 80px;
+    margin-right: 0%;
+    width: 5rem;
 }
 
 #form_addresslist input {
-    width: 150px;
+    width: 9.375rem;
 }
 
 #form_addresslist select {
-    width: 100px;
+    width: 6.25rem;
 }
 
 .form_address_data2 fieldset legend {
-    border: 2px solid purple;
+    border: 0.125rem solid purple;
 }
 
 #address_data2 {
@@ -196,29 +196,29 @@ fieldset {
 }
 
 .form_address_data {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 
 #form_submit_div label {
-    width: 150px;
+    width: 9.375rem;
 }
 
 #form_submit_div input {
-    width: 200px;
+    width: 12.5rem;
 }
 
 button[type="submit"] {
-    margin: 10px; width: 100px; 
+    margin: 0.625rem; width: 6.25rem; 
     background-color: purple; 
     color: white;
 }
 
 input[type="reset"] {
-    margin: 10px; width: 100px; 
+    margin: 0.625rem; width: 6.25rem; 
     background-color: purple; 
     color: white;
 }
 #form_phone table {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
