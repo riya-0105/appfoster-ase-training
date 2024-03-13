@@ -11,24 +11,21 @@
     width: 70%;
     border: 0.125rem solid black;
 }
-.intro_container h4 {
-    font-size: 2rem; 
+.intro_container h1 {
     margin: auto 3%;
 }
 
-.intro_container h5 {
-    font-size: 1.25rem; 
-    margin: 0% 5% 0% 3%; font-style:italic;
+.intro_container h3 {
+    margin: 0% 5% 0% 3%; 
+    font-style:italic;
 }
 
 .home p {
     margin: 0; 
-    font-size: 0.75rem;
 }
 
 .home a {
     margin: 0; 
-    font-size: 0.75rem;
     color: black;
 }
 
@@ -75,7 +72,7 @@
 
 .body_text h3 {
     font-style:italic;
-    margin-right: 3%;
+    padding: 2%;
 }
 
 .body_container {
@@ -90,17 +87,13 @@
 .body_text {
     margin: 5% 5% 0% 5%;
     display: inline-flex;
-    font-size: 0.75rem;
-    gap: 1rem;
+    gap: 2.25rem;
     text-align: justify;
+    width: auto;
 }
 
-.body_text p {
-    margin-left: 2%;
-}
-
-.body_text  ul{
-    margin-left: 1.7rem;
+.body_text ul{
+    margin-left: 2rem;
     padding-left: 0%;
     font-weight: bold;
     columns: 3;
@@ -109,6 +102,8 @@
 }
 
 .body_text ul li a {
+    margin: 0%;
+    padding: 0%;
     color:black; 
     text-decoration: none;
 }
@@ -147,27 +142,23 @@
 
 .body_text_exp h3 {
     font-style: italic;
-    font-size: 0.93rem;
     margin-left: 1rem;
 }
 
 
 .body_text_exp {
+    padding: 2%;
     display: flex;
+    gap: 1rem;
     flex-direction: row;
 }
 
 .company_container {
-    margin: -0.125rem 0.93rem;
-    padding: 0%;
-}
-
-.company_container h4 {
-    font-size: 0.825rem;
+    margin: -0.125rem;
+    padding: 0% 3%;
 }
 
 .company_container p {
-    font-size: 0.75rem;
     text-align: justify;
     margin-right: 2%;
     margin-bottom: 7%;
