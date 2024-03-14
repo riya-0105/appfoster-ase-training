@@ -176,6 +176,7 @@ body, html {
     background-color: white;
     height: auto;
     width: 98%;
+    margin-bottom: 10%;
     transform: translateX(0%);
 }
 .font_lighter {
