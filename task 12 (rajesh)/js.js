@@ -9,7 +9,7 @@ async function fetchUsers(){
     }
   }
   
-  async function populateUserList(){
+  async function populateUserList(pageNumber = 1, entries = 4){
     const userList = document.getElementById('user-list');
     try {
       const users = await fetchUsers();
@@ -17,27 +17,83 @@ async function fetchUsers(){
         console.error('Failed to fetch user data.');
         return;
       }
-      users.forEach(user => {
+      const total_pages = Math.ceil(users.length/entries);
+      const startIndex = (pageNumber-1) * entries, endIndex = Math.min(startIndex + entries, users.length)
+      userList.innerHTML = "";
+      for(let i=startIndex; i<endIndex; i++) {
         const row = document.createElement('tr');
         row.innerHTML = `
-          <td>${user.name}</td>
+          <td>${users[i].name}</td>
           <td>
-            <button type="button" class="btn btn-primary view-more" data-user-id="${user.id}">View More
+            <button type="button" class="btn btn-primary view-more" data-user-id="${users[i].id}">View More
             </button>
             </button>
-          </td>
-        `;
+            </td>
+          `;
         userList.appendChild(row);
-      });
-  
+      };
+
+      const container_page = document.getElementsByClassName("pagination_container")[0];
+      container_page.innerHTML = "";
+      const prev_pagination = document.createElement('button');
+      prev_pagination.setAttribute("id", "prev_page_btn");
+      prev_pagination.textContent = "Prev";
+      container_page.appendChild(prev_pagination);
+
+      prev_pagination.addEventListener("click", () => {
+        if(pageNumber>1) {
+          populateUserList(pageNumber-1);
+        }
+        else {
+          container_page.innerHTML = (`
+            <div>
+              Previous Page not allowed!!!
+            </div>
+          `)
+          setInterval(() => {
+            location.reload();
+          }, 1000)
+        }
+      })
+
+      
+      
+      for(let i=1; i<=total_pages; i++) {
+        const index_pagination = document.createElement('button');
+        index_pagination.setAttribute("id", `index_page_btn${i}`);
+        index_pagination.addEventListener("click", () => {
+          populateUserList(i, entries);
+        }) 
+        index_pagination.textContent = i;
+        container_page.appendChild(index_pagination);
+      }
+
+      const next_pagination = document.createElement("button");
+      next_pagination.textContent = "Next";
+      next_pagination.addEventListener("click", () => {
+        if(pageNumber<total_pages) {
+          populateUserList(pageNumber+1);
+        }
+        else {
+          container_page.innerHTML = (`
+            <div>
+              Next Page not allowed!!!
+            </div>
+          `)
+          setInterval(() => {
+            location.reload();
+          }, 1000)
+        }
+      })
+      container_page.appendChild(next_pagination);
       const viewMoreButtons = document.querySelectorAll('.view-more');
-      viewMoreButtons.forEach(button =>{
+       viewMoreButtons.forEach(button =>{
         button.addEventListener('click', function(){
           const userId = this.getAttribute('data-user-id');
           console.log(userId)
           displayUserInfo(userId);
         });
-      });
+       });
     }catch (error){
       console.error('Error fetching user data:', error);
     }
@@ -104,5 +160,5 @@ async function fetchUsers(){
   
   
   document.addEventListener('DOMContentLoaded', function(){
-    populateUserList();
+    populateUserList(1);
   });

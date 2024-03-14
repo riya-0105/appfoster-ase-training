@@ -32,3 +32,22 @@
     cursor: pointer;
   }
   
+
+  .pagination_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination_container div {
+    color: red;
+  }
+  .pagination_container button {
+    width: auto;
+    margin-right: 0.125rem;
+    height: auto;
+    background-color: #0066b2;
+    border-radius: 10%;
+    border: none;
+    color: white;
+  }
