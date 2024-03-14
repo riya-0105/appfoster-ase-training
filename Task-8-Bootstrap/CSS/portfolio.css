@@ -233,7 +233,6 @@ body, html {
     width: 0.625rem !important;
 }
 
-
-@media screen and (max-width: 600px) {
-
+.row_margin {
+    padding-bottom: 3%;
 }
