@@ -228,5 +228,11 @@ body, html {
 }
 
 .row_margin {
-    padding-bottom: 3%;
+    padding-bottom: 1.75%;
+}
+
+@media (max-width: 37rem) {
+    .row_margin {
+        padding-bottom: 3%;
+    }    
 }
