@@ -1,4 +1,8 @@
-
+* {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
 
 .container {
     display: flex;
@@ -82,9 +86,8 @@
 .education_container h1 {
     padding: 0%;
     margin: 19% 3%;
-    padding-bottom: 0%;
+    margin-right: 20%;
     color: purple;
-
 }
 
 .profile_text {
@@ -264,6 +267,7 @@
 
 .contact_info {
     margin-top: 5%;
+    margin-right: 10%;
     height: auto;
 }
 
@@ -275,6 +279,7 @@
 .edu_details {
     padding-top: 0%;
     margin-top: 0%;
+    margin-right: 20%;
     padding-left: 5%;
 }
 

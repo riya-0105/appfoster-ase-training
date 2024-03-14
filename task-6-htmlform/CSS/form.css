@@ -1,3 +1,9 @@
+* {
+    word-wrap: break-word;
+    overflow: break-word;
+    max-width: 100%;
+}
+
 .forms {
     display: flex;
     align-items: center;
@@ -221,4 +227,91 @@ input[type="reset"] {
 }
 #form_phone table {
     margin-left: 0.625rem;
+}
+
+
+@media (max-width: 37rem) {
+    .forms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        flex-direction: column;
+        width: 27rem;
+        height: auto;
+        border: 0.0625rem solid black;
+        overflow: scroll hiddden;
+    }
+    .complete_form {
+        width: 27rem;
+    }
+    
+    .form_payment {
+        height: 22rem;
+        border: 0.125rem solid purple;
+    }
+    
+    legend {
+        border: 0.125rem solid purple;
+    }
+    
+    .form_payment fieldset {
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 19.5rem;
+    }
+    .form_contact {
+        height: 17rem;
+        border: 0.125rem solid purple;
+    }
+    #form_phone {
+        display: block;
+    }
+    #form_phone table {
+        margin: 0%;
+    }
+    fieldset {
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 14.6rem;
+        border: 0.0625rem solid plum;
+    }
+    #form_submit_div label {
+        width: 17rem;
+    }
+    .form_address fieldset {
+        height: 37rem;
+    }
+
+    .form_address {
+        height: 39rem;
+        border: 0.125rem solid purple;
+    }
+    
+    .form_address_data fieldset {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 2%;
+        height: 12rem;
+        border: 0.0625rem solid plum;
+        margin-bottom: 4%;
+    }
+    .form_address_data2 fieldset { 
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 2%;
+        height: 4.5rem;
+        border: 0.0625rem solid plum;   
+    }
+    
+    .form_submit {
+        height: 16rem;
+        border: 0.125rem solid purple;
+    }
+    .form_submit fieldset {
+        margin-left: 4%;
+        height: 13.7rem;
+    }
 }
