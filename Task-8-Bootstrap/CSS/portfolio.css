@@ -143,6 +143,10 @@ body, html {
     background-color: lavender;
 }
 
+.collapse_list ul {
+    margin-top: 100%;
+}
+
 .collapse_list li {
     margin-left: 10%;
     margin-right: 10%;
