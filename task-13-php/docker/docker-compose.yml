@@ -1,0 +1,57 @@
+version: "3.3"
+services:
+  db:
+    image: mysql/mysql-server:latest
+    container_name: appfoster-larvel-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laraveldb
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_PASSWORD: password
+      MYSQL_USER: user
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysqldata:/var/lib/mysql
+    networks:
+      - appfoster-laravel-project
+
+  npm:
+    image: node:lts-alpine3.15
+    container_name: appfoster-laravel-node-npm
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - 3000:3000
+      - 3001:3001
+    working_dir: /var/www/html
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - appfoster-laravel-project
+
+  app:
+    image: bitnami/laravel:latest
+    container_name: appfoster-laravel-php
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - 8000:8000
+      - 8001:8001
+    working_dir: /var/www/html
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - appfoster-laravel-project
+
+  adminer:
+    image: adminer:latest
+    container_name: appfoster-laravel-node-adminer
+    ports:
+      - 8080:8080
+    networks:
+      - appfoster-laravel-project
+
+networks:
+  appfoster-laravel-project:
+    driver: bridge

@@ -132,3 +132,23 @@ span {
         box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.3125rem lightgray;
     }
 }
+
+.button_entries {
+    background-color: #318CE7;
+    width: auto;
+    color: white;
+    height: 1.75rem;
+}
+
+.input_data_entries {
+    margin-top: 5%;
+    display: flex;
+    margin-left: auto;
+    justify-content: end;
+    margin-right: 6.75rem;
+}
+
+.input_data_entries input {
+    margin-right: 2%;
+    width: 40%;
+}

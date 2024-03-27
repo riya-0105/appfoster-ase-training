@@ -45,18 +45,18 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
         new_div_info.classList.add("collapse");
         new_div_info.setAttribute("id", `collapse_info_${item.id}`);
         new_div_info.classList.add("collapse");
-        const new_div_span = document.createElement('span');
-        new_div_span.innerHTML = `
-        <div>
-            ID = ${item.id} <br>
-            Email ID = ${item.email} <br>
-            Gender = ${item.gender} <br>
-            Status = ${item.status} <br>
-        </div>
-        `; 
-        new_div_span.classList.add("span_container");
-        new_div_span.style.marginRight = "5%";
-        new_div_info.appendChild(new_div_span);
+        // const new_div_span = document.createElement('span');
+        // new_div_span.innerHTML = `
+        // <div>
+        //     ID = ${item.id} <br>
+        //     Email ID = ${item.email} <br>
+        //     Gender = ${item.gender} <br>
+        //     Status = ${item.status} <br>
+        // </div>
+        // `; 
+        // new_div_span.classList.add("span_container");
+        // new_div_span.style.marginRight = "5%";
+        // new_div_info.appendChild(new_div_span);
         new_Div_body.width = "100%";
         const newH3 = document.createElement('h3');
         newH3.textContent = item.name;
@@ -68,15 +68,16 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
         hr.style.width = "95%";
         hr.style.borderColor = "black";
         newButton.style.justifyContent = "flex-end";
-        newButton.dataset.bsToggle = "collapse";
-        newButton.dataset.bsTarget =  `#collapse_info_${item.id}`;
+        newButton.addEventListener('click', async function() {
+            await user_info(item);
+        });
         new_Div_body.appendChild(newH3);
         new_Div_body.appendChild(newButton);
         newDiv.appendChild(new_Div_body);
         newDiv.appendChild(new_div_info);
         newDiv.appendChild(hr);
         container.appendChild(newDiv);
-        console.log("height", new_div_span.offsetHeight)
+        // console.log("height", new_div_span.offsetHeight)
         // newButton.addEventListener("click", function() {
         //     console.log(document.querySelector(`#collapse_info_${item.id}`).offsetHeight)
         //     document.querySelector(`#collapse_info_${item.id}`).classList.toggle("show");
@@ -142,6 +143,37 @@ async function renderData(pageNumber = 1, entriesPage = 4) {
     paginationContainer.appendChild(nextPage);
 }
 
+
+async function user_info(item) {
+    console.log(item);
+    const modal = document.createElement('div');
+    modal.classList.add('modal', 'fade');
+    modal.setAttribute('id', 'userModal');
+    modal.innerHTML = 
+    `
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">User Data</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        ID = ${item.id} <br>
+        Email ID = ${item.email} <br>
+        Gender = ${item.gender} <br>
+        Status = ${item.status} <br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="location.reload()">Understood</button>
+        </div>
+      </div>
+    </div>`
+    ;
+    document.body.appendChild(modal);
+    const userModal = new bootstrap.Modal(modal);
+    userModal.show();
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     renderData(1);

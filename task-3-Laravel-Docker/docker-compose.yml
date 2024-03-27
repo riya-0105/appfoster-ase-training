@@ -1,0 +1,54 @@
+version: '25.0.3'
+
+services:
+
+  npm:
+    image: node:lts-alpine3.15
+    container_name: appfoster-laravel-node-npm
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - 3000:3000
+      - 3001:3001
+    working_dir: /var/www/html
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - appfoster-laravel-project
+  
+  db:
+    image: mysql
+    container_name: appfoster-larvel-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./laravel-app:/var/lib/mysql
+    networks:
+      - appfoster-laravel-project
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    networks:
+      - appfoster-laravel-project
+
+networks:
+  appfoster-laravel-project:
+    driver: bridge
+
+

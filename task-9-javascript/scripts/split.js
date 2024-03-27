@@ -23,7 +23,7 @@ function handlesubmit(e) {
         for(let i=0; i<a.length; i++) {
             console.log(colors[a[i]%colors.length], `${a[i]}0px`)
             results.innerHTML += `
-                <div style="width: ${a[i]}0%; height: 70px; border: 2px solid black; background-color: ${colors[a[i]%colors.length]}; display: flex; align-items: center; justify-content: center;">${a[i]}</div>
+                <div style="width: ${a[i]}0%; height: 70px; border: 2px solid black; background-color: ${colors[i%colors.length]}; display: flex; align-items: center; justify-content: center;">${a[i]}</div>
             `
         }
     }
