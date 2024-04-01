@@ -234,5 +234,100 @@ body, html {
 @media (max-width: 37rem) {
     .row_margin {
         padding-bottom: 3%;
-    }    
+    } 
+    .navbar {
+        margin-left: 0rem;
+    }
+    .navbar a svg {
+        width: 0.75rem;
+    }
+    .body_box h4 {
+        font-size: 1rem;
+        margin-left: 0rem !important;
+
+    }
+    .body_box h5 {
+        font-size: 1rem;
+        margin-right: 10%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6%;
+    }
+    .table {
+        margin-left: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .table tr {
+        width: 2rem;
+    }
+    .table tr th {
+        font-size: 0.80rem;
+    }
+    .table tr td {
+        font-size: 0.79rem;
+    }
+    .navbar-brand {
+        font-size: 0.90rem !important;
+        margin-left: 1rem !important;
+        width: 40%;
+        padding: 0rem;
+    }
+    .avatar_img {
+        width: 1.90rem !important;
+        height: 1.80rem !important;
+        margin-right: 0% !important;
+        border: 0.125rem solid black;
+    }
+    .rounded-circle svg {
+        width: 1.72rem;
+    }
+}
+
+@media (max-width: 28rem) {
+    .navbar-brand {
+        font-size: 0.90rem !important;
+        margin-left: 1rem !important;
+    }
+    .toggle_align {
+        margin-left: 10%;
+        width: 40%;
+    }
+    .body_box h4 {
+        font-size: 1rem;
+        margin-bottom: 5%;
+    }
+    .row_margin {
+        padding-bottom: 3%;
+    } 
+    .navbar {
+        margin-left: 0rem;
+    }
+    .navbar a svg {
+        display: none;
+    }
+    .card {
+        display: flex;
+        align-items: center !important;
+        margin: auto;
+        width: 4rem;
+        height: 1rem;
+    }
+
+    .card-title {
+        width: 3rem;
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+
+    .card-title h6 {
+        text-align: left;
+        justify-content: left !important;
+        font-size: 0.7rem;
+        padding: 0rem;
+    }
+    .card-title a {
+        justify-content: right !important;
+        font-size: 0.7rem;
+        padding: 0rem;
+    }
 }
