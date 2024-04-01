@@ -1,0 +1,125 @@
+.container-info {
+  display: flex;
+  width: 55rem;
+  justify-content: center;
+  margin: auto;
+  height: auto;
+  margin-top: 3%;
+  border: 2px solid black;
+  box-shadow: 0.5rem 0.5rem 0.75rem 0.25rem #87CEFA;
+}
+
+.container-header {
+  display: block;
+  width: 55rem;
+  margin: auto;
+  height: auto;
+}
+
+.table_container {
+  width: 100%;
+  margin: 2% 2%;
+  display: block;
+  justify-content: left;
+  font-size: 1.5rem; 
+  border-collapse: collapse;
+}
+
+.table_container th, td {
+  text-align: center;
+}
+
+.table_container th {
+  text-align: center;
+  font: bold 1em "Fira Sans", sans-serif;
+}
+
+
+.table_container tr {
+  height: 3rem;
+  margin-left: 2rem;
+  font: 0.80em "Fira Sans", sans-serif;
+  text-align: center;
+}
+
+.table_container td {
+  width: 5%;
+  padding-left: 4%;
+  text-align: left;
+}
+
+.table_container td button {
+  align-items: center;
+  margin: 2% 1% auto;
+  background-color: #1F75FE;
+  color: white;
+  box-shadow: 0 0.25rem 0.25rem 0 lightgray;
+  font-size: 1.05rem;
+  padding: 0.75%;
+  width: 5rem;
+  border: 0.1rem solid white;
+}
+
+.table_container td button:hover {
+  background-color: plum;
+  box-shadow: 0 0.5rem 0.5rem 0 gray;
+}
+
+.pagination {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin: 2.5rem auto;
+  width: 100%;
+}
+
+.pagination button {
+  background-color: #1F75FE;
+  color: white;
+  border: 0.1rem solid white;
+}
+
+.active_button {
+  background-color: lightcoral;
+}
+
+.pagination button:hover {
+  background-color: plum;
+  box-shadow: 0 0.5rem 0.5rem 0 gray;
+}
+
+.entries_count_container {
+  font-size: 1rem;
+  display: flex;
+  justify-content: end;
+  margin-top: 3%;
+}
+
+.entries_button {
+  margin-right: 1rem;
+}
+
+.entries_count_container input {
+  font-size: 1.25rem;
+  width: 30rem;
+}
+
+.entries_count_container button {
+  color: white;
+  font-size: 1.25rem;
+  background-color: #1F75FE;
+  border: 0.1rem solid white;
+  box-shadow: 0 0.15rem 0.15rem 0 #87CEFA;
+}
+
+.entries_count_container button:hover {
+  background-color: plum;
+  box-shadow: 0 0.5rem 0.5rem 0 gray;
+}
+
+.modal-body h6, p {
+  display: inline-block;
+  padding: 0.1%;
+}
+
+/*# sourceMappingURL=welcome.css.map */
