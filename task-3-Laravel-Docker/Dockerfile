@@ -1,2 +1,0 @@
-FROM php:8.2.12
-WORKDIR /src
