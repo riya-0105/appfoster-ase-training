@@ -4,13 +4,21 @@ async function add_new_user() {
     console.log(create_user_form);
     create_user_form.addEventListener("submit", async function(event) {
         event.preventDefault();
+        const technologyUsedArray = [];
         const formData = new FormData(create_user_form);
         const formObject = {};
         formData.forEach((value, key) => {
             formObject[key] = value;
         });
-        const technologyUsed = document.querySelectorAll('.new');
-        const technologyUsedArray = Array.from(technologyUsed.children).map(option =>option.textContent.trim());
+        const technologyUsed = document.querySelectorAll('.newOptionList');
+        console.log(technologyUsed);
+        technologyUsed.forEach((divNode) => {
+            divNode.childNodes.forEach((childNode) => {
+                if(childNode.nodeType === Node.TEXT_NODE) {
+                    technologyUsedArray.push(childNode.textContent.trim());
+                }
+            })
+        });
         formObject['Technology Used'] = technologyUsedArray;
         const jsonData = JSON.stringify(formObject);
         console.log(jsonData);
@@ -53,9 +61,9 @@ async function add_new_user() {
     });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    technology_used();
-    add_new_user();
+document.addEventListener('DOMContentLoaded', async function() {
+    await technology_used();
+    await add_new_user();
 });
 
 function display_modal(message, isError) {
@@ -96,6 +104,7 @@ async function technology_used() {
             console.log(newOption);
             const newOptionList = document.createElement('div');
             const deleteButton = document.createElement('button');
+            newOptionList.classList.add('newOptionList');
             deleteButton.textContent = 'x';
             deleteButton.classList.add("btn");
             deleteButton.classList.add("btn-primary");

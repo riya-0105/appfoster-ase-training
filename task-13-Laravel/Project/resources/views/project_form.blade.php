@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="redirect_button">
-            <button class="btn btn-primary" onclick="window.location.href = ('/project')">Back to Projects</button>
+            <button class="btn btn-primary" onclick="window.location.href = '/project'">Back to Projects</button>
         </div>
         <div class="container_form">
         <form class="form-new-user">

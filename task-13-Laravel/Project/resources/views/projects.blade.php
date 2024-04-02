@@ -16,7 +16,7 @@
                     <button class="entries_button" onclick="renderData(1, parseInt(document.getElementById('entriesPage').value) <= 0 ? 4 : parseInt(document.getElementById('entriesPage').value))">Enter</button>
                 </div> -->
                 <div class="entries_count_container">
-                    <button class="entries_button" onclick=`window.location.href="/create_user"`>Create New Project</button>
+                    <button class="entries_button" onclick="window.location.href='/create_project'">Create New Project</button>
                     <button class="entries_button" onclick="window.location.href = '/'">View Users</button>
                 </div>
             </div>
