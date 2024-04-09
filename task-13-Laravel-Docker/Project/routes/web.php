@@ -1,0 +1,71 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Api;
+use App\Http\Controllers\Api\v1\PostController;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectInfoController;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+
+// list all the user names to the home screen
+Route::get('/', [UserController::class, 'list']);
+
+// edit user info 
+Route::post('/', [UserController::class, 'update'])->name('update_user');
+
+// delete user info 
+// Route::post('/', [UserController::class, 'delete'])->name('delete_user');
+
+// project page -> list of all projects
+Route::get('/project', [ProjectInfoController::class, 'list']);
+
+// form to submit new user
+Route::post('/create_user', [UserController::class, 'create'])->name('create_user');
+
+
+// create user page -> returns view
+Route::get('/create_user', function() {
+    return view('layouts.users.form');
+});
+
+Route::get('/profiles',function() {
+    return Http::get('api/host/users');
+});
+
+
+
+Route::get('/create_project', [ProjectInfoController::class, 'user_list']);
+
+Route::post('/create_project', [ProjectInfoController::class, 'create'])->name('create_project');
+
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// http sample testing in postman
+
+Route::get('/csrf', function() {
+    return csrf_token();
+});
+
+
+Route::get('/host/users', function($id=null, $name=null) {
+    return "hello".$id.$name;
+});
+

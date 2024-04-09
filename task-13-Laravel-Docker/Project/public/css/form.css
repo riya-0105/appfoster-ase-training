@@ -1,0 +1,40 @@
+.container_form {
+    display: flex;
+    margin: 2% auto;
+    justify-content: center;
+    width: 35em;
+    height: auto;
+    border: 0.05rem solid black;
+    box-shadow: 0.5rem 0.5rem 0.75rem #87CEFA;
+}
+
+.container_form form {
+    width: 30em;
+    padding: 2%;
+}
+
+.container_form form div {
+    padding: 2%;
+}
+
+.redirect_button {
+    display: flex;
+    width: 35em;
+    margin: 2% auto;
+    justify-content: end;
+}
+
+.selected_tech div {
+    padding: 2%;
+}
+
+
+.exception_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exception_box {
+    width: 25rem;
+}
