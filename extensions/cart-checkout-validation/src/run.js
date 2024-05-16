@@ -26,11 +26,9 @@ export function run(input) {
     if(merchandise.__typename === "ProductVariant") {
       const productId = merchandise.product.id;
 
-      if((productVariantInfo !== '') && (productVariantList !== null)) {
+      if(productVariantInfo !== '') {
         // console.log("product variant is: ", productVariantInfo);
-
-        for(const variantItem of productVariantList) {
-          const variantExistsInInfo = productVariantInfo.find(item => item.productId === variantItem.id);
+          const variantExistsInInfo = productVariantInfo.find(item => item.productId === merchandise.id);
           console.log("Variant is: ", variantExistsInInfo);
           if(variantExistsInInfo) {
             console.log("the data is: ", variantExistsInInfo.productCount, quantity);
@@ -45,9 +43,7 @@ export function run(input) {
               errorFound = true;
               return;
             }
-            break;
           }
-        }
       }
       if(categoryInfo !== '') {
         const matchingCategoryInfoItem = categoryInfo.find(item => {

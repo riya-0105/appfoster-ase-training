@@ -17,6 +17,7 @@
       lines {
         quantity
         id
+    
         merchandise {
           __typename
           # ... on CustomProduct {
@@ -25,8 +26,11 @@
           ... on ProductVariant {
             id
             sku
+            
             product {
               id
+              handle
+              title
               # storeLimitField: metafield(namespace: "storeCount", key: "storeCount") {
               #   value
               # }

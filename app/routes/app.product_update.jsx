@@ -180,13 +180,13 @@ console.log(quantityLimit);
             id
             name
           }
-          variants(first: 100) {
-            nodes {
-              id
-              title
-              price
-            }
-          }
+          # variants(first: 100) {
+          #   nodes {
+          #     id
+          #     title
+          #     price
+          #   }
+          # }
           metafields(first: 100) {
             edges {
               node{
@@ -248,12 +248,12 @@ console.log(quantityLimit);
                     value: "active",
                     type: "string",
                   },
-                  {
-                    namespace: "productVariant",
-                    key: `productVariant`,
-                    value: JSON.stringify(productExists.variants.nodes),
-                    type: "json_string",
-                  },
+                  // {
+                  //   namespace: "productVariant",
+                  //   key: `productVariant`,
+                  //   value: JSON.stringify(productExists.variants.nodes),
+                  //   type: "json_string",
+                  // },
                 ],
               },
             },
