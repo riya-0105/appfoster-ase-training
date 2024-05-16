@@ -1,0 +1,53 @@
+  query RunInput {
+    shop {
+          storeLimitShopField: metafield(namespace: "storeCount", key: "storeCount") {
+            value
+          }
+          storeStatusShopField: metafield(namespace: "storeStatus", key: "storeStatus") {
+            value
+         }
+         categoryInfoField: metafield(namespace: "categoryInfo", key: "categoryInfo") {
+          value
+         }
+         ProductVariantField: metafield(namespace: "productVariantInfo", key: "productVariantInfo") {
+          value
+         }
+        }
+      cart {
+      lines {
+        quantity
+        id
+        merchandise {
+          __typename
+          # ... on CustomProduct {
+          #   customProductTitle: title
+          # }
+          ... on ProductVariant {
+            id
+            sku
+            product {
+              id
+              # storeLimitField: metafield(namespace: "storeCount", key: "storeCount") {
+              #   value
+              # }
+              # storeStatusField: metafield(namespace: "storeStatus", key: "storeStatus") {
+              #   value
+              # }
+              # categoryIdField: metafield(namespace: "categoryId", key: "categoryId") {
+              #   value
+              # }
+              productLimitField: metafield(namespace: "productLimit", key: "productLimit") {
+                value
+              }
+              productStatusField: metafield(namespace: "productStatus", key: "productStatus") {
+                value
+              }
+              productVariantList: metafield(namespace: "productVariant", key: "productVariant") {
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  }
