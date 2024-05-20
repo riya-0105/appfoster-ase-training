@@ -20,6 +20,10 @@ const fetchData = async () => {
     const session = await getSessionTokenForShop(shop);
     const shopName = session ? session.shop : null;
     const accessToken = session ? session.accessToken : null;
+
+    if(!accessToken) {
+      return [];
+    }
   
     const query = `
     query {

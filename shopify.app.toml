@@ -3,7 +3,7 @@
 client_id = "64d43b004e0dd946e3a6cbb7796d5689"
 name = "order-limit-backend"
 handle = "order-limit-backend"
-application_url = "https://super-variance-thereafter-vegetable.trycloudflare.com"
+application_url = "https://paperback-loved-pros-templates.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,read_publications,write_products"
 
 [auth]
 redirect_urls = [
-  "https://super-variance-thereafter-vegetable.trycloudflare.com/auth/callback",
-  "https://super-variance-thereafter-vegetable.trycloudflare.com/auth/shopify/callback",
-  "https://super-variance-thereafter-vegetable.trycloudflare.com/api/auth/callback"
+  "https://paperback-loved-pros-templates.trycloudflare.com/auth/callback",
+  "https://paperback-loved-pros-templates.trycloudflare.com/auth/shopify/callback",
+  "https://paperback-loved-pros-templates.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

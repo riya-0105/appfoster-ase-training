@@ -20,6 +20,10 @@ const fetchCategories = async () => {
     const shopName = session ? session.shop : null;
     const accessToken = session ? session.accessToken : null;
 
+    if(!accessToken) {
+      return [];
+    }
+
     // console.log(shopName, accessToken);
 
     const query = `
@@ -96,6 +100,10 @@ const fetchCategories = async () => {
     );
 
     const { products, storeData } = await fetchData();
+
+    if(!products) {
+      return [];
+    }
 
     // console.log("product list: ", products);
 

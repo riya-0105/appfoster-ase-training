@@ -29,6 +29,7 @@ export async function loader({ request }) {
   console.log("the data is: ", storeData);
   console.log("the products are: ", productData);
   console.log("the categories are: ", category);
+  console.log("the data is send!!");
   return { storeData, productData, category };
 }
 
@@ -177,20 +178,23 @@ export default function Index() {
     }
   }, []);
 
-  const compareValues = (field, order, selectedView) => {
+  const compareValues = (field, order) => {
     console.log("Field is: ", field, order);
     return function (a, b) {
       let valueA, valueB;
       if (valueA === null) valueA = '';
       if (valueB === null) valueB = '';
 
-      if(selectedView === 'product wise') {
-        field = price.amount;
+      if (field === 'price.amount') {
+        console.log("field is: ", a.price.amount);
+        valueA = (typeof a.price.amount === 'string') ? parseFloat(a.price.amount) : a.price.amount;
+        valueB = (typeof b.price.amount === 'string') ? parseFloat(b.price.amount) : b.price.amount;
+      } else {
+          valueA = (typeof a[field] === 'string') ? a[field].toLowerCase() : a[field];
+          valueB = (typeof b[field] === 'string') ? b[field].toLowerCase() : b[field];
       }
 
-      valueA = (typeof a[field] === 'string') ? a[field].toLowerCase() : a[field];
-      valueB = (typeof b[field] === 'string') ? b[field].toLowerCase() : b[field];
-      console.log("values are: ", valueA, valueB)
+      console.log("value is: ", valueA, valueB);
 
       let comparison = 0;
       if (valueA > valueB) {
@@ -213,12 +217,12 @@ export default function Index() {
     switch (selectedView) {
       case 'product wise':
         console.log("filtered rows before are: ", filterProductRows);
-        sortedData = [...filterProductRows].sort(compareValues(field, order, "product wise"));
+        sortedData = [...filterProductRows].sort(compareValues(field, order));
         setFilterProductRows(sortedData);
         console.log("filtered rows are: ", filterProductRows);
         break;
         case 'category wise':
-          sortedData = [...filterCategoryRows].sort(compareValues(field, order, "category wise"));
+          sortedData = [...filterCategoryRows].sort(compareValues(field, order));
           setFilterCategoryRows(sortedData);
           console.log("filtered rows are: ", filterCategoryRows);
         break;
@@ -284,8 +288,8 @@ export default function Index() {
     submit(formData, { method: "post" });
   }
 
-  const productDataListSearch = searchQuery || orderButton === true ? filterProductRows : productDataList; 
-  const categoryDataList = searchQuery || orderButton === true ? filterCategoryRows : categoryData;
+  const productDataListSearch = (searchQuery || (orderButton === true)) ? filterProductRows : productDataList; 
+  const categoryDataList = (searchQuery || (orderButton === true)) ? filterCategoryRows : categoryData;
 
   function handleModalClose() {
     setModalActive(prevModalActive => !prevModalActive);
@@ -501,7 +505,7 @@ export default function Index() {
                         }}
                         onClick={() => {
                           
-                          handleSort("price");
+                          handleSort("price.amount");
                         }}
                       >
                         ⇅

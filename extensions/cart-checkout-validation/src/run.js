@@ -26,11 +26,9 @@ export function run(input) {
     if(merchandise.__typename === "ProductVariant") {
       const productId = merchandise.product.id;
 
-      if((productVariantInfo !== '') && (productVariantList !== null)) {
+      if(productVariantInfo !== '') {
         // console.log("product variant is: ", productVariantInfo);
-
-        for(const variantItem of productVariantList) {
-          const variantExistsInInfo = productVariantInfo.find(item => item.productId === variantItem.id);
+          const variantExistsInInfo = productVariantInfo.find(item => item.productId === merchandise.id);
           console.log("Variant is: ", variantExistsInInfo);
           if(variantExistsInInfo) {
             console.log("the data is: ", variantExistsInInfo.productCount, quantity);
@@ -45,42 +43,44 @@ export function run(input) {
               errorFound = true;
               return;
             }
-            break;
           }
-        }
       }
-      if(categoryInfo !== '') {
-        const matchingCategoryInfoItem = categoryInfo.find(item => {
-          return item.productList.find(product => product.id === productId) !== undefined;
-        });
-        if(matchingCategoryInfoItem) {
-          const categoryStatus = matchingCategoryInfoItem.categoryStatus;
-          const maxCount = parseInt(matchingCategoryInfoItem.categoryCount);
-          if(categoryStatus === 'active') {
-            console.log(maxCount);
-            if((maxCount > 0) && (maxCount < quantity)) {
-              errors.push({
-                localizedMessage:
-                  `Max Count for category Reached!!! Not possible to order more than ${maxCount} products for this category`,
-                target: "cart",
-              });
-              errorFound = true;
-              return;
+      if(errorFound !== true) {
+        if(categoryInfo !== '') {
+          const matchingCategoryInfoItem = categoryInfo.find(item => {
+            return item.productList.find(product => product.id === productId) !== undefined;
+          });
+          if(matchingCategoryInfoItem) {
+            const categoryStatus = matchingCategoryInfoItem.categoryStatus;
+            const maxCount = parseInt(matchingCategoryInfoItem.categoryCount);
+            if(categoryStatus === 'active') {
+              console.log(maxCount);
+              if((maxCount > 0) && (maxCount < quantity)) {
+                errors.push({
+                  localizedMessage:
+                    `Max Count for category Reached!!! Not possible to order more than ${maxCount} products for this category`,
+                  target: "cart",
+                });
+                errorFound = true;
+                return;
+              }
             }
           }
         }
       }
       // const categoryLimit = parseInt(merchandise.product.categoryLimitField.value) || -1;
 
-      if(productStatusField === 'active') {
-        if((productLimitField > 0) && (productLimitField < quantity)) {
-          errors.push({
-            localizedMessage:
-              `Max Count for Product is Reached!!! Not possible to order more than ${productLimitField} products for this product`,
-            target: "cart",
-          });
-          errorFound = true;
-          return;
+      if(errorFound !== true) {
+        if(productStatusField === 'active') {
+          if((productLimitField > 0) && (productLimitField < quantity)) {
+            errors.push({
+              localizedMessage:
+                `Max Count for Product is Reached!!! Not possible to order more than ${productLimitField} products for this product`,
+              target: "cart",
+            });
+            errorFound = true;
+            return;
+          }
         }
       }
     }

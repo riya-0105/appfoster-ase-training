@@ -19,6 +19,10 @@ const fetchProducts = async () => {
     const shopName = session ? session.shop : null;
     const accessToken = session ? session.accessToken : null;
 
+    if(!accessToken) {
+      return [];
+    }
+
     const query = `
     query {
       products(first: 250) {
